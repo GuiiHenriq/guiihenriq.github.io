@@ -17,7 +17,7 @@ btnCloseMenu.addEventListener('click', closeMenu);
 
 /* Slide */
 $(document).ready(function() {
-  const speed = 6000;
+  const speed = 4000;
   let run = setInterval('rotate()',speed);
 
   let item_width = $('#slide li').outerWidth();

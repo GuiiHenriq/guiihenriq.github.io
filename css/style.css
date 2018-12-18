@@ -44,7 +44,13 @@ body {
   transition: transform .2s;
 }
 
-.social i:hover {
+.social img {
+  width: 25px;
+  padding: 5px;
+  transition: transform .2s;
+}
+
+.social img:hover {
   transform: scale(1.5);
 }
 

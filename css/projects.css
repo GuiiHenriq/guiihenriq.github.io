@@ -16,7 +16,6 @@
 .projeto {
   max-width: 800px;
   max-height: 600px;
-  border: 15px solid #0d9ffa;
   border: 15px solid #24f399;
   text-align: center;
   padding: 20px;
@@ -25,6 +24,7 @@
 .projeto img {
   display: block;
   margin: 20px auto 0 auto;
+  max-width: 620px;
 }
 
 .projeto p {
@@ -33,6 +33,20 @@
 
 .infos p {
   font-size: 0.7em;
+}
+
+.infos img {
+  width: 30px;
+  display: inline-block;
+  transition: transform .2s;
+}
+
+.infos a:last-child {
+  margin-left: 50px;
+}
+
+.infos img:hover {
+  transform: scale(1.5);
 }
 
 #prev, #next {
@@ -48,21 +62,54 @@
   margin-left: 20px;
 }
 
-/* slide */
-html {
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
 #slide {
-  overflow-y: hidden;
-  overflow-x: hidden;
-  width: 690px;
-  height: 710px;
+  overflow: hidden;
+  max-width: 690px;
+  max-height: 710px;
   display: inline-block;
 }
 
 #slide ul {
   position: relative;
   display: flex;
+}
+
+
+@media screen and (min-width: 430px) and (max-width: 830px) {
+  .projeto {
+    max-width: 295px;
+    padding: 10px;
+    margin-top: 50px;
+  }
+
+  .projeto img {
+    max-width: 295px;
+  }
+
+  #slide {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .projeto {
+    width: 300px;
+    height: 700px;
+    padding: 10px;
+    margin-top: 50px;
+    border: 8px solid #252525;
+  }
+
+  .projeto img {
+    max-width: 255px;
+  }
+
+  #slide {
+    width: 300px;
+    height: 700px;
+  }
+
+  #prev, #next {
+    display: none;
+  }
 }
