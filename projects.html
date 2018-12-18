@@ -9,56 +9,92 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
-
   <div class="container">
-    <section id="header">
+    <section id="sidebar">
       <div class="logo">
         <p>GH</p>
       </div>
 
-      <nav class="nav">
+      <nav class="menu">
         <ul>
-          <li><a href="index.html"><img src="./icons-gradient/home.svg" alt=""></a></li>
-          <li><a href="projects.html"><img src="./icons-gradient/graphic-design.svg" alt=""></a></li>
-          <li><a href="contact.html"><img src="./icons-gradient/email.svg" alt=""></a></li>
-
-          <!--<li><a href="#"><img src="./icons/house-outline.svg" width="30" alt=""></a></li>
-          <li><a href="#"><img src="./icons/computer.svg" width="30" alt=""></a></li>
-          <li><a href="#"><img src="./icons/email.svg" width="30" alt=""></a></li>-->
-          <!--<li><a href="#"><i class="fas fa-home fa-2x"></i></a></li>
-          <li><a href="#"><i class="fas fa-eye fa-2x"></i></a></li>
-          <li><a href="#"><i class="fas fa-envelope fa-2x"></i></a></li>-->
+          <li><a href="index.html"><img src="image/home.svg" alt=""></a></li>
+          <li><a href="projects.html"><img src="image/projects.svg" alt=""></a></li>
+          <li><a href="contact.html"><img src="image/contact.svg" alt=""></a></li>
         </ul>
       </nav>
 
-
-      <nav>
+      <nav class="social">
         <ul>
           <li><a href="https://www.linkedin.com/in/guilhermeerba/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
           <li><a href="https://github.com/GuiiHenriq" target="_blank"><i class="fab fa-github"></i></a></li>
         </ul>
       </nav>
-      <!--<nav class="menu">
-          <button data-menu="open">menu <i class="fas fa-bars"></i></button>
-          <ul data-menu="menu">
-            <button data-menu="close"><i class="fas fa-times"></i></button>
-            <li><a href="#">Home</a></li>
-            <li><a href="#tela">Sobre</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav>-->
+      <nav class="menu-mobile">
+        <button data-menu="open">menu <i class="fas fa-bars"></i></button>
+        <ul data-menu="menu">
+          <button data-menu="close"><i class="fas fa-times"></i></button>
+          <li><a href="index.html"><img src="image/home.svg" alt=""></a></li>
+          <li><a href="projects.html"><img src="image/projects.svg" alt=""></a></li>
+          <li><a href="contact.html"><img src="image/contact.svg" alt=""></a></li>
+        </ul>
+      </nav>
     </section>
 
     <section id="content">
-      <h1>Olá, Seja Bem-Vindo</h1>
-      <h1>Sou o Guilherme</h1>
-      <h1>Desenvolvedor Front-end</h1>
+      <img id="prev" src="image/prev.svg" alt="">
+
+      <div id="slide">
+        <ul>
+          <li>
+            <div class="projeto">
+              <img src="image/projeto-1.png" alt="">
+              <h2>Netflix Redesign</h2>
+              <p>My Portfolio! I designed it and maintained it by myself. You can check my project on Github and see if it’s cool
+                for you. Feedback is always welcome and appreciated.</p>
+              <div class="infos">
+                <p>ILLUSTRATOR CC REACT STYLED COMPONENTS BASSCSS YARN INTELLIJIDEA</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="projeto">
+              <img src="image/projeto-1.png" alt="">
+              <h2>Netflix Redesign</h2>
+              <p>My Portfolio! I designed it and maintained it by myself. You can check my project on Github and see if it’s cool
+                for you. Feedback is always welcome and appreciated.</p>
+              <div class="infos">
+                <p>ILLUSTRATOR CC REACT STYLED COMPONENTS BASSCSS YARN INTELLIJIDEA</p>
+              </div>
+            </div>
+          </li>
+          
+          <li>
+            <div class="projeto">
+              <img src="image/projeto-1.png" alt="">
+              <h2>Netflix Redesign</h2>
+              <p>My Portfolio! I designed it and maintained it by myself. You can check my project on Github and see if it’s cool
+                for you. Feedback is always welcome and appreciated.</p>
+              <div class="infos">
+                <p>ILLUSTRATOR CC REACT STYLED COMPONENTS BASSCSS YARN INTELLIJIDEA</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <img id="next" src="image/next.svg" alt="">
     </section>
+
   </div>
 
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> 
 <script src="js/main.js"></script>
 </body>
 </html>

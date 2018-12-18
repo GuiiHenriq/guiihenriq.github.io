@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+#content {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-mobile {
+  z-index: 800;
+}
+
+.projeto {
+  max-width: 800px;
+  max-height: 600px;
+  border: 15px solid #0d9ffa;
+  border: 15px solid #24f399;
+  text-align: center;
+  padding: 20px;
+}
+
+.projeto img {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.projeto p {
+  padding: 10px;
+}
+
+.infos p {
+  font-size: 0.7em;
+}
+
+#prev, #next {
+  width: 50px;
+  cursor: pointer;
+}
+
+#prev {
+  margin-right: 20px;
+}
+
+#next {
+  margin-left: 20px;
+}
+
+/* slide */
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#slide {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 690px;
+  height: 710px;
+  display: inline-block;
+}
+
+#slide ul {
+  position: relative;
+  display: flex;
+}

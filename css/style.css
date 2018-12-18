@@ -1,19 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://rsms.me/inter/inter-ui.css');
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
-/*html {
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-.header-top::-webkit-scrollbar { 
-  display: none;
-}*/
 
 body {
-  font-family: 'Inter UI', sans-serif;
   background: #252525;
   color: #fff;
 }
@@ -23,7 +10,7 @@ body {
   flex-direction: row;
 }
 
-#header {
+#sidebar {
   width: 70px;
   height: 100vh;
   background: #f1f1f1;
@@ -40,86 +27,33 @@ body {
   color: #24f399;
 }
 
-nav img {
+.menu img {
   width: 32px;
   padding: 10px;
   transition: transform .2s;
 }
 
-nav img:hover {
+.menu img:hover {
   transform: scale(1.5);
 }
 
-nav i {
+.social i {
   font-size: 1.125em;
   color: #ccc;
   padding: 10px;
   transition: transform .2s;
 }
 
-nav i:hover {
+.social i:hover {
   transform: scale(1.5);
 }
 
-#content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#content h1 {
-  color: #fff;
-  font-size: 3em;
-  margin-left: 100px;
-  font-family: 'Lato', sans-serif;
-}
-
-
-.menu button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.125em;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.menu ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.6);
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.menu-mobile {
   display: none;
 }
 
-.menu ul.active {
-  display: flex;
-}
-
-[data-menu="close"] {
-  color: red;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 2.25em;
-  text-transform: uppercase;
-  line-height: 2;
-}
-
-
-@media screen and (max-width: 768px) {
-  #header {
+@media screen and (max-width: 992px) {
+  #sidebar {
     width: 100%;
     height: 80px;
     flex-direction: row;
@@ -132,14 +66,58 @@ nav i:hover {
     flex-direction: column;
   }
 
-  nav ul {
+  .menu, .social {
+    display: none;
+  }
+
+  .menu-mobile {
     display: flex;
   }
+
+  .menu-mobile button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.125em;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .menu-mobile ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+  [data-menu="menu"] img {
+    width: 50px;
+  }
+
+  .menu-mobile ul.active {
+    display: flex;
+  }
+  
+  [data-menu="close"] i {
+    top: 0;
+    font-size: 2em;
+  }
+  
+  .menu-mobile a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.25em;
+    text-transform: uppercase;
+    line-height: 2;
+  }
 }
-
-
-
-
-
-
-
