@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-img {
-  display: block;
-  max-width: 100%;
-}
 
 html {
   overflow-y: hidden;
@@ -136,7 +132,7 @@ html {
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  color: white;
+  color: #fff;
   width: 40px;
   height: 40px;
   background: #FB5 url('../image/arrow.svg') center center no-repeat;
@@ -167,24 +163,31 @@ html {
 }
 
 @media screen and (max-width: 429px) {
+  html {
+    overflow-y: auto;
+  }
+
+  .custom-controls {
+    display: none;
+  }
+
   .projeto {
     width: 300px;
-    height: 700px;
+    height: 480px;
     padding: 10px;
-    margin-top: 50px;
     border: 8px solid #252525;
+    margin-top: 0;
   }
 
   .projeto img {
     max-width: 255px;
   }
 
-  #slide {
-    width: 300px;
-    height: 700px;
+  .arrow-nav {
+    margin: 0;
   }
 
-  #prev, #next {
-    display: none;
+  .next {
+    margin-left: 50px;
   }
 }
