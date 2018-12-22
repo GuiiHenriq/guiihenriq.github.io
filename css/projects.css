@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 html {
   overflow-y: hidden;
@@ -7,7 +6,7 @@ html {
 }
 
 #content {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   max-width: 100%;
 }
 
@@ -111,6 +110,7 @@ html {
   margin: 2px;
   box-shadow: 0 2px 2px rgba(0,0,0,.5);
   transition: .3s;
+  cursor: pointer;
 }
 
 .custom-controls li.active {
@@ -118,8 +118,8 @@ html {
   transform: scale(1);
 }
 
-.custom-controls li {
-  cursor: pointer;
+.custom-controls li img {
+  max-width: 100%;
 }
 
 .arrow-nav {
@@ -129,21 +129,21 @@ html {
 }
 
 .arrow-nav button {
-  cursor: pointer;
+  background: none;
   border: none;
-  border-radius: 4px;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  background: #FB5 url('../image/arrow.svg') center center no-repeat;
+  cursor: pointer;
 }
 
-.arrow-nav button.prev {
-  transform: rotate(-180deg);
+.arrow-nav button img {
+  width: 50px;
+}
+
+.arrow-nav button:focus {
+  outline: none;
 }
 
 .next {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 @media screen and (min-width: 430px) and (max-width: 830px) {
