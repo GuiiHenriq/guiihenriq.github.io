@@ -1,16 +1,52 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-
 #content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-#content h1 {
+.texts h1 {
   color: #fff;
   font-size: 3em;
   margin-left: 100px;
   font-family: 'Montserrat', sans-serif;
+}
+
+.img {
+  margin-right: 100px;
+}
+
+.img img {
+  display: block;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .texts {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .texts h1 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .texts h1:first-child {
+    margin-top: 50px;
+  }
+
+  .img {
+    display: inline;
+    float: none;
+  }
+
+  .img img {
+    display: inline;
+    float: none;
+  }
 }

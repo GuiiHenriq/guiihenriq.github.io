@@ -5,6 +5,10 @@ html {
   overflow-x: hidden;
 }
 
+#sidebar {
+  padding: 0 6px;
+}
+
 #content {
   font-family: 'Montserrat', sans-serif;
   max-width: 100%;
@@ -20,6 +24,10 @@ html {
   border: 15px solid #24f399;
   text-align: center;
   padding: 20px;
+}
+
+.large-size {
+  max-height: 650px;
 }
 
 .projeto img {
@@ -178,6 +186,8 @@ html {
     border: 8px solid #252525;
     margin-top: 0;
   }
+
+
 
   .projeto img {
     max-width: 255px;
