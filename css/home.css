@@ -7,13 +7,17 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .texts h1 {
   color: #fff;
   font-size: 3em;
-  margin-left: 100px;
-  font-family: 'Montserrat', sans-serif;
+  margin-left: 100px; 
+}
+
+.texts h1:first-child {
+  font-size: 3.50em;
 }
 
 .img {
@@ -25,7 +29,69 @@
   max-width: 100%;
 }
 
+.btn a {
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  border: 5px solid #24f399;
+  color: #fff;
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 50px;
+  padding: 20px 50px 20px 50px;
+  position: relative;
+  font-weight: bold;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn a::before,
+.btn a::after {
+  background: #24f399;
+  color: #252525;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.btn a:hover {
+  color: #252525;
+}
+
+.btn a::after {
+  height: 100%;
+  left: -35%;
+  top: 0;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  transform-origin: top left;
+  width: 0;
+}
+
+.btn a:hover:after {
+  height: 100%;
+  width: 135%;
+}
+.btn a,
+.btn a::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn {
+  display: none;
+}
+
+
 @media screen and (max-width: 992px) {
+  #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .texts {
     display: block;
     margin: 0 auto;
@@ -34,19 +100,23 @@
   .texts h1 {
     margin: 0;
     text-align: center;
+    font-size: 2.5em;
   }
 
   .texts h1:first-child {
     margin-top: 50px;
   }
 
-  .img {
-    display: inline;
-    float: none;
+  .texts h1:last-child {
+    margin-top: 30px;
   }
 
-  .img img {
-    display: inline;
-    float: none;
+  .img {
+    display: none;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
   }
 }

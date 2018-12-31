@@ -13,24 +13,24 @@
   margin: 0 0 80px 100px;
 }
 
-#content img {
+.contacts img {
   margin: 0 30px 0 100px;
   width: 40px;
 }
 
-#content a:first-child img {
+.contacts a:first-child img {
   margin-bottom: -11px;
 }
 
-#content a:nth-child(2) img {
+.contacts a:nth-child(2) img {
   margin-bottom: -5px;
 }
 
-#content a:last-child img {
+.contacts a:last-child img {
   margin-bottom: -15px;
 }
 
-#content a {
+.contacts a {
   display: block;
   font-size: 1.5em;
   color: #fff;
@@ -39,15 +39,15 @@
   position: relative;
 }
 
-#content a:first-child {
+.contacts a:first-child {
   margin-top: 0;
 }
 
-#content a:hover {
+.contacts a:hover {
   color: #fff;
 }
 
-#content a:before {
+.contacts a:before {
   content: "";
   position: absolute;
   height: 2px;
@@ -61,47 +61,50 @@
   transition: all 0.3s ease-in-out 0s;
 }
 
-#content a:first-child:before {
+.contacts a:first-child:before {
   content: "";
   margin-left: 169px;
   width: 63%;
 }
 
-#content a:nth-child(2):before {
+.contacts a:nth-child(2):before {
   content: "";
   margin-left: 169px;
   width: 69%;
 }
 
-#content a:last-child:before {
+.contacts a:last-child:before {
   content: "";
   margin-left: 169px;
   width: 52%;
 }
 
-#content a:hover:before {
+.contacts a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
-#content button {
+
+
+.btn {
+  font-size: 1.6em;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
   background: none;
   border: 5px solid #24f399;
-  color: #fff;
   display: block;
-  font-size: 1.6em;
-  font-weight: bold;
   margin: 100px 0 0 100px;
   padding: 15px;
   position: relative;
-  font-weight: bold;
   overflow: hidden;
   cursor: pointer;
 }
 
-#content button::before,
-#content button::after {
+.btn::before,
+.btn::after {
   background: #24f399;
   color: #252525;
   content: '';
@@ -109,11 +112,7 @@
   z-index: -1;
 }
 
-#content button:hover {
-  color: #252525;
-}
-
-#content button::after {
+.btn::after {
   height: 100%;
   left: -35%;
   top: 0;
@@ -123,12 +122,17 @@
   width: 0;
 }
 
-#content button:hover:after {
+.btn:hover:after {
   height: 100%;
   width: 135%;
 }
-#content button,
-#content button::after {
+
+.btn:hover {
+  color: #252525;
+}
+
+.btn,
+.btn::after {
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
   -o-transition: all 0.3s;
