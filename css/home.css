@@ -120,3 +120,51 @@
     justify-content: space-between;
   }
 }
+
+#maintenance {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #252525;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#maintenance h2 {
+  margin: 0;
+}
+
+#maintenance nav li {
+  display: inline;
+}
+
+#maintenance nav ul {
+  text-align: center;
+}
+
+#maintenance nav i {
+  font-size: 1.125em;
+  color: #ccc;
+  padding: 10px;
+  transition: transform .2s;
+}
+
+#maintenance nav img {
+  width: 25px;
+  padding: 5px;
+  transition: transform .2s;
+}
+
+#maintenance nav img:hover {
+  transform: scale(1.5);
+}
+
+@media screen and (max-width: 768px) {
+  #maintenance p {
+    text-align: center;
+    max-width: 80%;
+  }
+}
