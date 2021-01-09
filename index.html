@@ -1,40 +1,764 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Guilherme Henrique</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="shortcut icon" type="image/ico" href="favicon.ico">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/home.css">
-  
+	
+	<!--
+		Basic
+	-->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<title>Guilherme Henrique</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="vCard & Resume Template" />
+	<meta name="keywords" content="vcard, resposnive, resume, personal, card, cv, cards, portfolio" />
+	<meta name="author" content="beshleyua" />
+	
+	<!--
+		Load Fonts
+	-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	
+	<!--
+		Load CSS
+	-->
+	<link rel="stylesheet" href="css/basic.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="css/ionicons.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+
+	<!--
+		Background Gradient
+	-->
+	<link rel="stylesheet" href="css/gradient.css" />
+	
+	<!--
+		Template New-Skin
+	-->
+	<link rel="stylesheet" href="css/new-skin/new-skin.css" />
+
+	<!--
+		Template RTL
+	-->
+	<!--<link rel="stylesheet" href="css/rtl.css" />-->
+	
+	<!--
+		Template Colors
+	-->
+	<link rel="stylesheet" href="css/demos/demo-2-colors.css" />
+	<!--<link rel="stylesheet" href="css/template-colors/blue.css" />-->
+	<!--<link rel="stylesheet" href="css/template-colors/orange.css" />-->
+	<!--<link rel="stylesheet" href="css/template-colors/pink.css" />-->
+	<!--<link rel="stylesheet" href="css/template-colors/purple.css" />-->
+	<!--<link rel="stylesheet" href="css/template-colors/red.css" />-->
+
+	<!--
+		Template Dark
+	-->
+	<link rel="stylesheet" href="css/new-skin/classic-skin.css" />
+	<link rel="stylesheet" href="css/template-dark/dark.css" />
+	
+
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!--
+		Favicons
+	-->
+	<link rel="shortcut icon" href="images/favicons/favicon.png">
+	
 </head>
+
 <body>
-  <!--<div id="maintenance">
-    <h1>Guilherme Henrique</h1>
-    <p></p>
-
-    <nav>
-      <h2>Fale Comigo</h2>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/guilhermeerba/" target="_blank"><img src="image/linkedin.svg" alt=""></a></li>
-        <li><a href="https://github.com/GuiiHenriq" target="_blank"><img src="image/github.svg" alt=""></a></li>
-      </ul>
-    </nav>
-  </div>-->
-
-  <div id="notfound">
-		<div class="notfound">
-			<div class="notfound-404">
-				<h1>404</h1>
-				<h2>Guilherme Henrique</h2>
-      </div>
-      <p>estamos trabalhando em um novo layout para este ano</p>
-			<a href="https://www.linkedin.com/in/guilhermeerba/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-			<a href="https://github.com/GuiiHenriq" target="_blank"><i class="fab fa-github"></i></a>
+	<div class="page new-skin">
+		
+		<!-- preloader -->
+		<div class="preloader">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="spinner">
+						<div class="double-bounce1"></div>
+						<div class="double-bounce2"></div>
+					</div>
+				</div>
+			</div>
 		</div>
+
+		<!-- background -->
+		<div class="background gradient">
+			<ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+		</div>
+
+		<!--
+			Container
+		-->
+		<div class="container opened" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
+
+			<!--
+				Header
+			-->
+			<header class="header">
+
+				<!-- header profile -->
+				<div class="profile">						
+					<div class="image">
+						<a href="#">
+							<img src="images/picture.jpg" alt="Guilherme Henrique">
+						</a>
+					</div>
+					<div class="title">Gui Henrique</div>
+					<div class="subtitle subtitle-typed">
+						<div class="typing-title">
+							<p>Front end</p>
+							<p>Developer</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- menu btn -->
+				<!--<a href="#" class="menu-btn"><span></span></a>-->
+
+				<!-- menu -->
+				<div class="top-menu">
+					<ul>
+						<li class="active">
+							<a href="#about-card">
+								<span class="icon ion-person"></span>
+								<span class="link">Sobre</span>
+							</a>
+						</li>
+						<li>
+							<a href="#resume-card">
+								<span class="icon ion-android-list"></span>
+								<span class="link">Currículo</span>
+							</a>
+						</li>
+						<li>
+							<a href="#works-card">
+								<span class="icon ion-paintbrush"></span>
+								<span class="link">Projetos</span>
+							</a>
+						</li>
+						<li>
+							<a href="#contacts-card">
+								<span class="icon ion-at"></span>
+								<span class="link">Contato</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</header>
+
+			<!--
+				Card - Started
+			-->
+			<div class="card-started" id="home-card">
+
+				<!--
+					Profile
+				-->
+				<div class="profile">
+
+					<!-- profile image -->
+					<div class="slide" style="background-image: url(images/bg-card.jpg);"></div>
+
+					<!-- profile photo -->
+					<div class="image">
+						<img src="images/picture.jpg" alt="Guilherme Henrique" />
+					</div>
+
+					<!-- profile titles -->
+					<div class="title">Guilherme Henrique</div>
+					<!--<div class="subtitle">Web Designer</div>-->
+					<div class="subtitle subtitle-typed">
+						<div class="typing-title">
+							<p>Front end</p>
+							<p>Developer</p>
+						</div>
+					</div>
+
+					<!-- profile socials -->
+					<div class="social">
+						<a target="_blank" href="https://github.com/GuiiHenriq"><span class="fa fa-github"></span></a>
+						<a target="_blank" href="https://www.linkedin.com/in/guilhermeerba/"><span class="fa fa-linkedin"></span></a>
+					</div>
+					
+					<!-- profile buttons -->
+					<div class="lnks">
+						<a href="#" class="lnk" download="curriculo-gui-henrique.pdf">
+							<span class="text">Meu Currículo</span>
+						</a>
+						<a href="mailto:erba.guilherme@gmail.com" class="lnk">
+							<span class="text">Meu E-mail</span>
+						</a>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 
+				Card - About
+			-->
+			<div class="card-inner animated active" id="about-card">
+				<div class="card-wrap">
+
+					<!-- 
+						About 
+					-->
+					<div class="content about">
+
+						<!-- title -->
+						<div class="title">Sobre Mim</div>
+
+						<!-- content -->
+						<div class="row">
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="text-box">
+									<p>
+										Me chamo Guilherme, resido em São Paulo, capital. Estou dentro do Mundo do desenvolvimento Web desde 2016, porém, em 2018 mudei totalmente minha rotina e me aprofundei nos estudos afim de me consolidar na área, neste ano tive grandes aprendizados e experiências que ajudaram na minha formação. Já atuei em áreas totalmente diferente do Desenvolvimento Web, como no setor Financeiro. Porém, desde então estou totalmente voltado para o Desenvolvimento Web.
+									</p>
+								</div>
+							</div>
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="info-list">
+									<ul>
+										<li><strong>Idade . . . . .</strong> 21</li>
+										<li><strong>Cidade . . . . .</strong> São Paulo/SP</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+					</div>
+					
+					<!--
+						Technologies
+					-->
+					<div class="content clients">
+						<!-- content -->
+						<div class="row client-items">
+
+							<!-- html - item -->
+							<div class="col col-d-3 col-t-3 col-m-6 border-line-v">
+								<div class="client-item">
+									<div class="image">
+										<img src="images/libs/html.png" alt="Logo HTML" />
+									</div>
+								</div>
+							</div>
+
+							<!-- css - item -->
+							<div class="col col-d-3 col-t-3 col-m-6 border-line-v">
+								<div class="client-item">
+									<div class="image">
+										<img src="images/libs/css.png" alt="Logo CSS" />
+									</div>
+								</div>
+							</div>
+
+							<!-- reactjs - item -->
+							<div class="col col-d-3 col-t-3 col-m-6 border-line-v">
+								<div class="client-item">
+									<div class="image">
+										<img src="images/libs/react.png" alt="Logo ReactJS" />
+									</div>
+								</div>
+							</div>
+
+							<!-- vuejs - item -->
+							<div class="col col-d-3 col-t-3 col-m-6 border-line-v">
+								<div class="client-item">
+									<div class="image">
+										<img src="images/libs/vue.png" alt="Logo VueJS" />
+									</div>
+								</div>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--
+				Card - Resume
+			-->
+			<div class="card-inner" id="resume-card">
+				<div class="card-wrap">
+
+					<!--
+						Resume
+					-->
+					<div class="content resume">
+
+						<!-- title -->
+						<div class="title">Currículo</div>
+
+						<!-- content -->
+						<div class="row">
+
+							<!-- experience -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="resume-title border-line-h">
+									<div class="icon"><i class="fa fa-briefcase"></i></div>
+									<div class="name">Experiência</div>
+								</div>
+								<div class="resume-items">
+									<div class="resume-item border-line-h active">
+										<div class="date">Nov/2020 - Momento</div>
+										<div class="name">Front end Developer Pleno</div>
+										<div class="company">Wunderman Thompson</div>
+
+										<div class="date false-active">Set/2019 - Out/2020</div>
+										<div class="name false-active">Front end Developer Junior</div>
+										<div class="company false-active">Wunderman Thompson</div>
+										<p>											
+											Atuando diretamente com a companhia Vivo, responsável pelo desenvolvimento/manutenções das landing pages e do Portal da Vivo, utilizando VueJS. Exectuamos as tasks com a metodologia ágil Kanban e usamos nosso workflow git.
+										</p>
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">Fev/2019 - Ago/2019</div>
+										<div class="name">Front end Developer Junior</div>
+										<div class="company">Left Digital</div>
+										<p>
+											Responsável por projetos de sites institucionais, landing pages e e-mail marketing. Atuei em projetos de grandes clientes, iFood Shop, Cacau Show e Banco Toyota. Trabalhando também em projetos com ReactJS.
+										</p>
+									</div>
+									<div class="resume-item">
+										<div class="date">Mar/2018 - Dez/2018</div>
+										<div class="name">Freelancer Front end</div>
+										<div class="company">Byte Stage</div>
+										<p>
+											Responsável pelos projetos de sites institucionais, sites em Wordpress, landing pages e atendimento ao cliente.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- education -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="resume-title border-line-h">
+									<div class="icon"><i class="fa fa-university"></i></div>
+									<div class="name">Educação</div>
+								</div>
+								<div class="resume-items">
+									<div class="resume-item border-line-h active">
+										<div class="date">Ago/2019 - Ago/2021</div>
+										<div class="name">Análise e Desenvolvimento de Sistemas</div>
+										<div class="company">Impacta Tecnologia</div>
+										<p>
+											Curso tecnólogo focado em Desenvolvimento de Sistemas (front e back-end).
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+
+					</div>
+
+					<!--
+						Skills
+					-->
+					<div class="content skills">
+
+						<!-- title -->
+						<div class="title">Skills</div>
+					
+						<!-- content -->
+						<div class="row">
+						
+							<!-- skill item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="skills-list">
+									<div class="skill-title border-line-h">
+										<div class="icon"><i class="fa fa-paint-brush"></i></div>
+										<div class="name">Geral</div>
+									</div>
+									<ul>
+										<li class="border-line-h"> 
+											<div class="name">HTML</div>
+											<div class="progress">
+												<div class="percentage" style="width:80%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h"> 
+											<div class="name">CSS</div>
+											<div class="progress">
+												<div class="percentage" style="width:80%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h"> 
+											<div class="name">JAVASCRIPT</div>
+											<div class="progress">
+												<div class="percentage" style="width:75%;"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- skill item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="skills-list dotted">
+									<div class="skill-title border-line-h">
+										<div class="icon"><i class="fa fa-flag"></i></div>
+										<div class="name">Frameworks/Libs</div>
+									</div>
+									<ul>
+										<li class="border-line-h"> 
+											<div class="name">VueJS</div>
+											<div class="progress">
+												<div class="percentage" style="width:70%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h"> 
+											<div class="name">ReactJS</div>
+											<div class="progress">
+												<div class="percentage" style="width:50%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h"> 
+											<div class="name">jQuery</div>
+											<div class="progress">
+												<div class="percentage" style="width:80%;"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- skill item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="skills-list list">
+									<div class="skill-title border-line-h">
+										<div class="icon"><i class="fa fa-list"></i></div>
+										<div class="name">Complementares</div>
+									</div>
+									<ul>
+										<li> 
+											<div class="name">Wordpress</div>
+										</li>
+										<li> 
+											<div class="name">Bootstrap</div>
+										</li>
+										<li> 
+											<div class="name">NPM/Yarn</div>
+										</li>
+										<li> 
+											<div class="name">Sass</div>
+										</li>
+										<li> 
+											<div class="name">Gulp</div>
+										</li>
+										<li> 
+											<div class="name">Webpack</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="clear"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!--
+				Card - Works
+			-->
+			<div class="card-inner" id="works-card">
+				<div class="card-wrap">
+
+					<!--
+						Works
+					-->
+					<div class="content works">
+
+						<!-- title -->
+						<div class="title">Projetos Destaque</div>
+
+						<!-- content -->
+						<div class="row grid-items border-line-v">
+
+							<!-- work item photo -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h">
+								<div class="box-item">
+									<div class="image">
+										<a href="images/works/screen-lp-wt-semana-da-equidade.jpg" class="has-popup-image">
+											<img src="images/works/thumb-screen-lp-wt-semana-equidade.jpg" alt="" />
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://semanadaequidadewt.com.br/" target="_blank" class="name">WT - Semana da Equidade</a>
+										<div class="category">
+											Projeto desenvolvido em equipe, voltado para as lives da Semana da Equidade da Wunderman Thompson.
+											
+										</div>
+										<a href="https://semanadaequidadewt.com.br/" class="button">
+											<span class="text">Ver Projeto</span>
+											<span class="arrow"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h">
+								<div class="box-item">
+									<div class="image">
+										<a href="images/works/screen-lp-pnb.jpg" class="has-popup-image">
+											<img src="images/works/thumb-screen-lp-pnb.jpg" alt="" />
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://www.dinheironacontapernambucanas.com/" target="_blank" class="name">Pernambucanas - Dinheiro na Conta</a>
+										<div class="category">
+											Projeto desenvolvido dentro da WT, para o sistema de cashback da Pernambucanas.
+										</div>
+										<a href="https://www.alymente.com.br/" class="button">
+											<span class="text">Ver Projeto</span>
+											<span class="arrow"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h">
+								<div class="box-item">
+									<div class="image">
+										<a href="images/works/screen-agencia-left.jpg" class="has-popup-image">
+											<img src="images/works/thumb-screen-agencia-left.jpg" alt="" />
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://agencialeft.digital/" target="_blank" class="name">Agência Left Digital</a>
+										<div class="category">
+											Projeto desenvolvido solo, para o site institucional da Agência.
+											
+										</div>
+										<a href="https://agencialeft.digital/" class="button">
+											<span class="text">Ver Projeto</span>
+											<span class="arrow"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h">
+								<div class="box-item">
+									<div class="image">
+										<a href="images/works/screen-lp-alymente.jpg" class="has-popup-image">
+											<img src="images/works/thumb-screen-lp-alymente.jpg" alt="" />
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://www.alymente.com.br/" target="_blank" class="name">Alymente</a>
+										<div class="category">
+											Projeto desenvolvido solo, para o site institucional da Alymente.
+											
+										</div>
+										<a href="https://www.alymente.com.br/" class="button">
+											<span class="text">Ver Projeto</span>
+											<span class="arrow"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!--
+				Card - Contacts
+			-->
+			<div class="card-inner contacts" id="contacts-card">
+				<div class="card-wrap">
+
+					<!--
+						Conacts Info
+					-->
+					<div class="content contacts">
+
+						<!-- title -->
+						<div class="title">Fale Comigo</div>
+
+						<!-- content -->
+						<div class="row">
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="info-list">
+									<ul>
+										<li><strong>Email . . . . .</strong> erba.guilherme@gmail.com</li>
+										<li><strong>Linkedin . . . . .</strong> linkedin.com/in/guilhermeerba</li>
+										<li><strong>Github . . . . .</strong> github.com/GuiiHenriq</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="s_overlay"></div>
+		<div class="content-sidebar">
+			<div class="sidebar-wrap search-form">
+				<aside id="secondary" class="widget-area">
+					<section id="search-2" class="widget widget_search">
+						<label>
+							<span class="screen-reader-text">Search for:</span>
+							<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+						</label>
+						<input type="submit" class="search-submit" value="Search">
+					</section>
+					<section class="widget widget_recent_entries">
+						<h2 class="widget-title">
+							<span class="widget-title-span"><span class="first-word">Recent</span> Posts</span>
+						</h2>
+						<ul>
+							<li>
+								<a href="#">Creativity Is More Than</a>
+							</li>
+							<li>
+								<a href="#">Designing the perfect</a>
+							</li>
+							<li>
+								<a href="#">Music Player Design</a>
+							</li>
+							<li>
+								<a href="#">A Song And Dance Act</a>
+							</li>
+							<li>
+								<a href="#">By spite about do of allow</a>
+							</li>
+						</ul>
+					</section>
+					<section class="widget widget_recent_comments">
+						<h2 class="widget-title">
+							<span class="widget-title-span"><span class="first-word">Recent</span> Comments</span>
+						</h2>
+						<ul>
+							<li class="recentcomments">
+								<span class="comment-author-link">JOHN SMITH</span> on <a href="#">Creativity Is More Than</a>
+							</li>
+							<li class="recentcomments">
+								<span class="comment-author-link">ADAM SMITH</span> on <a href="#">Creativity Is More Than</a>
+							</li>
+							<li class="recentcomments">
+								<span class="comment-author-link">admin</span> on <a href="#">Designing the perfect</a>
+							</li>
+							<li class="recentcomments">
+								<span class="comment-author-link">admin</span> on <a href=#">Designing the perfect</a>
+							</li>
+							<li class="recentcomments">
+								<span class="comment-author-link">James</span> on <a href="#">Designing the perfect</a>
+							</li>
+						</ul>
+					</section>
+					<section class="widget widget_archive">
+						<h2 class="widget-title">
+							<span class="widget-title-span">
+								<span class="first-letter">Archives</span>
+							</span>
+						</h2>
+						<ul>
+							<li>
+								<a href="#">November 2018</a>
+							</li>
+						</ul>
+					</section>
+					<section class="widget widget_categories">
+						<h2 class="widget-title">
+							<span class="widget-title-span"><span class="first-letter">Categories</span></span>
+						</h2>
+						<ul>
+							<li class="cat-item cat-item-2">
+								<a href="#">Design</a>
+							</li>
+							<li class="cat-item cat-item-3">
+								<a href="#">Music</a>
+							</li>
+						</ul>
+					</section>
+					<section class="widget widget_meta">
+						<h2 class="widget-title">
+							<span class="widget-title-span"><span class="first-letter">Meta</span></span>
+						</h2>
+						<ul>
+							<li><a href="#">Log in</a></li>
+							<li><a href="#">Entries feed</a></li>
+							<li><a href="#">Comments feed</a></li>
+							<li><a href="#">WordPress.org</a></li>
+						</ul>
+					</section>
+				</aside>
+			</div>
+			<span class="close"></span>
+		</div>
+
 	</div>
+	
+	<!--
+		jQuery Scripts
+	-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script src="js/imagesloaded.pkgd.js"></script>
+	<script src="js/isotope.pkgd.js"></script>
+	<script src="js/jquery.slimscroll.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/typed.js"></script>
+	<script src="https://use.fontawesome.com/8da76d029b.js"></script>
+	
+	<!--
+		Google map api
+	-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz2w7HUaWudHwd7AWQpCL48Qs050WOn9s"></script>
+	
+	<!--
+		Main Scripts
+	-->
+	<script src="js/scripts.js"></script>
+	
 </body>
 </html>
