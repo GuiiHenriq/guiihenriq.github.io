@@ -8,9 +8,20 @@ interface NavLinkProps {
 export const Container = styled.header`
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   height: 4rem;
   border-bottom: 4px solid ${({ theme }) => theme.backgroundLight};
+
+  div {
+    display: flex;
+    align-items: center;
+
+    > a {
+      color: ${({ theme }) => theme.primary};
+      font-weight: 700;
+      font-size: 2rem;
+    }
+  }
 
   ul {
     display: flex;

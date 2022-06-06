@@ -27,7 +27,7 @@ export default function Project({ project }: ProjetcProps) {
   return (
     <ProjectContainer>
       <Head>
-        <title>{project.title} - Resume NextJS</title>
+        <title>{project.title} | Guilherme Henrique</title>
 
         <meta property="og:image" content={project.thumbnail} />
         <meta property="og:image:secure_url" content={project.thumbnail} />

@@ -12,8 +12,24 @@ export const Container = styled.div<ContainerProps>`
   position: relative;
   padding: 3rem 5rem;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .cta-back {
+    z-index: 2;
+    cursor: pointer;
+    color: ${({ theme }) => theme.secondary};
+    transition: 0.5s;
+
+    &:hover {
+      color: ${({ theme }) => theme.primary};
+    }
+
+    svg {
+      width: 34px;
+      height: 34px;
+    }
+  }
 
   section {
     z-index: 1;

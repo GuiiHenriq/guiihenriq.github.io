@@ -5,9 +5,12 @@ export const Container = styled.section`
 
   > section {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
     margin-top: 7rem;
-    display: flex;
-    gap: 1.5rem;
     padding-bottom: 8rem;
     border-bottom: 3px solid ${({ theme }) => theme.primary};
 
@@ -28,13 +31,15 @@ export const ItemContainer = styled.div`
     background: ${({ theme }) => theme.gradient};
     padding: 1rem;
     padding-top: 2.5rem;
-    width: 20rem;
+    //width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     transition: 0.5s;
-    max-width: 19rem;
+    width: 100%;
+    height: 100%;
+    //max-width: 19rem;
 
     h1 {
       color: ${({ theme }) => theme.primary};
@@ -62,7 +67,7 @@ export const ItemContainer = styled.div`
   }
 
   &:nth-child(even) > div {
-    margin-top: 4rem;
+    //margin-top: 4rem;
   }
 
   @media (max-width: 1000px) {

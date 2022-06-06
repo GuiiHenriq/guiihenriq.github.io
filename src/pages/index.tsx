@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { HomeContainer } from '../styles/HomeStyles';
 import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
+import About from '../components/About';
 import Experiences from '../components/Experiences';
 import Projects from '../components/Projects';
 import Knowledge from '../components/Knowledge';
@@ -33,7 +34,7 @@ export default function Home({ projects }: HomeProps) {
   return (
     <HomeContainer>
       <Head>
-        <title>Home - Resume NextJS</title>
+        <title>Home | Guilherme Henrique</title>
 
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
@@ -46,6 +47,7 @@ export default function Home({ projects }: HomeProps) {
 
       <main className="container">
         <HomeHero />
+        <About />
         <Experiences />
         <Projects projects={projects} />
         <Knowledge />

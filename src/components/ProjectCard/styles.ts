@@ -11,6 +11,7 @@ export const Container = styled.div<ContainerProps>`
     height: 10rem;
     background: url(${props => props.img}) no-repeat center;
     background-size: cover;
+    background-position: top;
     padding: 1.5rem;
     display: flex;
     align-items: flex-end;

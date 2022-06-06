@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import ProjectCard from '../../components/ProjectCard';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
 import { data } from '../../services/content';
+import SectionTitle from '../../components/SectionTitle';
 
 interface IProject {
   slug: string;
@@ -21,7 +22,7 @@ export default function Projects({ projects }: ProjectProps) {
   return (
     <ProjectsContainer>
       <Head>
-        <title>Projects - Resume NextJS</title>
+        <title>Projects | Guilherme Henrique</title>
 
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
@@ -32,15 +33,19 @@ export default function Projects({ projects }: ProjectProps) {
 
       <Header />
       <main className="container">
-        {projects.map(project => (
-          <ProjectCard
-            key={project.slug}
-            title={project.title}
-            type={project.type}
-            img={project.thumbnail}
-            slug={project.slug}
-          />
-        ))}
+        <SectionTitle title="Projects" />
+
+        <section>
+          {projects.map(project => (
+            <ProjectCard
+              key={project.slug}
+              title={project.title}
+              type={project.type}
+              img={project.thumbnail}
+              slug={project.slug}
+            />
+          ))}
+        </section>
       </main>
     </ProjectsContainer>
   );

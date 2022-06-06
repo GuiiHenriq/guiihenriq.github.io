@@ -100,6 +100,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     height: 100%;
     background: url(${props => props.imgUrl}) no-repeat center;
     background-size: cover;
+    background-position: top;
     position: relative;
 
     > div {

@@ -19,10 +19,13 @@ function HomeHero() {
             </span>
             <span className="purple">Infos</span> {'\u007B'}
             <div>
-              Nome: <span className="blue">Guilherme,</span>
+              Name: <span className="blue">Guilherme Henrique,</span>
             </div>
             <div>
-              Sobrenome: <span className="blue">Henrique,</span>
+              Age: <span className="blue">23,</span>
+            </div>
+            <div>
+              Hobbies: <span className="blue">Games and Motorcycle speed,</span>
             </div>
             {'\u007D'}
           </CodeItem>
@@ -37,6 +40,12 @@ function HomeHero() {
             </div>
             <div>
               Experience: <span className="blue">4 years,</span>
+            </div>
+            <div>
+              Working with: <span className="blue">Vue,</span>
+            </div>
+            <div>
+              Studying: <span className="blue">Next/Nuxt and Web3,</span>
             </div>
             {'\u007D'}
           </CodeItem>
