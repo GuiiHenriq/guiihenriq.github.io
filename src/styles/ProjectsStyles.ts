@@ -11,19 +11,19 @@ export const ProjectsContainer = styled.div`
       margin: 5rem auto;
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
-    @media (max-width: 1000px) {
+    @media (min-width: ${({ theme }) => theme.md}) {
       > section {
         grid-template-columns: 1fr 1fr;
       }
     }
 
-    @media (max-width: 500px) {
+    @media (min-width: ${({ theme }) => theme.lg}) {
       > section {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   }

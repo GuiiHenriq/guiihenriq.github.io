@@ -1,10 +1,10 @@
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
-import Avatar from '../../assets/people.webp';
+import AssetWeb from '../../assets/asset-web.png';
 
 function HomeHero() {
   return (
     <Container data-aos="fade-up">
-      <img src={Avatar} alt="Guilherme Henrique" />
+      <img src={AssetWeb} alt="Guilherme Henrique" />
 
       <div>
         <TextContainer>

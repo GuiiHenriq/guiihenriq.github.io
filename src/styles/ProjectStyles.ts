@@ -11,18 +11,18 @@ export const ProjectContainer = styled.div`
     width: 100%;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding: 0 5rem;
+    padding: 0 2.5rem;
 
     p {
       color: ${({ theme }) => theme.textLight};
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 300;
       text-align: justify;
     }
 
     button {
       background: ${({ theme }) => theme.primary};
-      padding: 0.8rem 3rem;
+      padding: 0.7rem 2rem;
       border-radius: 0.5rem;
       border: none;
       margin-top: 2rem;
@@ -34,24 +34,24 @@ export const ProjectContainer = styled.div`
 
       a {
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
         font-weight: 300;
       }
     }
 
-    @media (max-width: 700px) {
-      padding: 0 2.5rem;
+    @media (min-width: ${({ theme }) => theme.lg}) {
+      padding: 0 5rem;
 
       p {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
 
       button {
-        padding: 0.7rem 2rem;
+        padding: 0.8rem 3rem;
 
         a {
-          font-size: 0.9rem;
+          font-size: 1.5rem;
         }
       }
     }

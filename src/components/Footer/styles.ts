@@ -20,7 +20,7 @@ export const Container = styled.footer`
       color: ${({ theme }) => theme.secondary};
       text-transform: uppercase;
       font-weight: 300;
-      font-size: 1.2rem;
+      font-size: 0.9rem;
 
       &:hover {
         color: ${({ theme }) => theme.primary};
@@ -30,11 +30,11 @@ export const Container = styled.footer`
     > section {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.5rem;
 
       svg {
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
         color: ${({ theme }) => theme.text};
         transition: 0.5s;
         cursor: pointer;
@@ -45,17 +45,17 @@ export const Container = styled.footer`
       }
     }
 
-    @media (max-width: 450px) {
+    @media (min-width: ${({ theme }) => theme.md}) {
       button {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
       }
 
       > section {
-        gap: 0.5rem;
+        gap: 1rem;
 
         svg {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 2rem;
+          height: 2rem;
         }
       }
     }

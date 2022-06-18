@@ -6,22 +6,25 @@ export const Container = styled.section`
   > section {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
-    margin-top: 7rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    margin-top: 5rem;
     padding-bottom: 8rem;
     border-bottom: 3px solid ${({ theme }) => theme.primary};
+    flex-direction: column;
 
-    @media (max-width: 1000px) {
-      gap: 1rem;
+    @media (min-width: ${({ theme }) => theme.md}) {
+      flex-direction: row;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
 
-    @media (max-width: 700px) {
-      flex-direction: column;
-      margin-top: 5rem;
-      gap: 2rem;
+    @media (min-width: ${({ theme }) => theme.lg}) {
+      grid-column-gap: 1.5rem;
+      grid-row-gap: 1.5rem;
+      margin-top: 7rem;
     }
   }
 `;
@@ -29,9 +32,7 @@ export const Container = styled.section`
 export const ItemContainer = styled.div`
   > div {
     background: ${({ theme }) => theme.gradient};
-    padding: 1rem;
     padding-top: 2.5rem;
-    //width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -39,7 +40,8 @@ export const ItemContainer = styled.div`
     transition: 0.5s;
     width: 100%;
     height: 100%;
-    //max-width: 19rem;
+    padding: 2rem;
+    max-width: 100%;
 
     h1 {
       color: ${({ theme }) => theme.primary};
@@ -62,17 +64,11 @@ export const ItemContainer = styled.div`
   }
 
   &:hover > div {
-    filter: brightness(1.5);
-    transform: translateY(-20px);
+    transform: translateY(0);
   }
 
-  &:nth-child(even) > div {
-    //margin-top: 4rem;
-  }
-
-  @media (max-width: 1000px) {
+  @media (min-width: ${({ theme }) => theme.md}) {
     > div {
-      height: 15rem;
       padding-top: 1.5rem;
 
       h1 {
@@ -90,19 +86,10 @@ export const ItemContainer = styled.div`
     }
   }
 
-  @media (max-width: 700px) {
-    &:nth-child(even) > div {
-      margin-top: 0;
-    }
-
-    &:hover > div {
-      transform: translateY(0);
-    }
-
+  @media (min-width: ${({ theme }) => theme.lg}) {
     > div {
-      height: auto;
-      padding: 2rem;
-      max-width: 100%;
+      padding: 1rem;
+      max-width: none;
 
       h1 {
         font-size: 2rem;
@@ -115,6 +102,11 @@ export const ItemContainer = styled.div`
       p {
         font-size: 1rem;
       }
+    }
+
+    &:hover > div {
+      filter: brightness(1.5);
+      transform: translateY(-20px);
     }
   }
 `;

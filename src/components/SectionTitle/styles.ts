@@ -9,16 +9,16 @@ export const Container = styled.div`
 
   h1 {
     color: ${({ theme }) => theme.primary};
-    font-size: 4.5rem;
+    font-size: 1.8rem;
   }
 
   h2 {
     color: ${({ theme }) => theme.secondary};
-    font-size: 3.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
   }
 
-  @media (max-width: 1000px) {
+  @media (min-width: ${({ theme }) => theme.md}) {
     h1 {
       font-size: 2.5rem;
     }
@@ -28,13 +28,13 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (min-width: ${({ theme }) => theme.lg}) {
     h1 {
-      font-size: 1.8rem;
+      font-size: 4.5rem;
     }
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 3.5rem;
     }
   }
 `;

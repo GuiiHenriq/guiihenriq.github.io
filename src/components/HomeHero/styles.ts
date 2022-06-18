@@ -6,6 +6,7 @@ export const Container = styled.section`
   gap: 2rem;
   align-items: center;
   justify-content: center;
+  flex-direction: column-reverse;
   margin-top: 5rem;
 
   > img {
@@ -14,30 +15,25 @@ export const Container = styled.section`
   }
 
   > div {
-    flex: 4;
+    width: 100%;
+    flex: 1;
   }
 
-  @media (max-width: 1450px) {
+  @media (min-width: ${({ theme }) => theme.md}) {
+    flex-direction: row;
+
+    > img {
+      width: 22rem;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.lg}) {
     > img {
       width: 30rem;
     }
 
     > div {
       flex: 1;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    > img {
-      width: 22rem;
-    }
-  }
-
-  @media (max-width: 700px) {
-    flex-direction: column-reverse;
-
-    > div {
-      width: 100%;
     }
   }
 `;
@@ -47,33 +43,23 @@ export const TextContainer = styled.section`
   width: 100%;
 
   h1 {
-    font-size: 8rem;
+    font-size: 3rem;
     color: ${({ theme }) => theme.primary};
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: ${({ theme }) => theme.secondary};
   }
 
-  @media (max-width: 1450px) {
+  @media (min-width: ${({ theme }) => theme.xl}) {
     h1 {
       font-size: 5rem;
     }
 
     h2 {
       font-size: 2rem;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    h1 {
-      font-size: 3rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
     }
   }
 `;
@@ -86,12 +72,12 @@ export const InfosContainer = styled.section`
 `;
 
 export const CodeItem = styled.pre`
+  width: 100%;
   background: ${({ theme }) => theme.gradient};
   padding: 2rem;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 300;
   color: #fff;
-  width: 24rem;
   align-self: flex-start;
   transition: 1s !important;
 
@@ -124,13 +110,14 @@ export const CodeItem = styled.pre`
     }
   }
 
-  @media (max-width: 1450px) {
+  @media (min-width: ${({ theme }) => theme.md}) {
     width: 18rem;
     padding: 1rem;
     font-size: 0.8rem;
   }
 
-  @media (max-width: 1000px) {
-    width: 100%;
+  @media (min-width: ${({ theme }) => theme.lg}) {
+    width: 24rem;
+    font-size: 1rem;
   }
 `;

@@ -4,21 +4,22 @@ export const Container = styled.section`
   width: 100%;
 
   > section {
-    margin-top: 8rem;
+    margin-top: 5rem;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
+    gap: 3rem;
 
-    @media (max-width: 1000px) {
+    @media (min-width: ${({ theme }) => theme.md}) {
       gap: 5rem;
     }
 
-    @media (max-width: 700px) {
-      gap: 3rem;
-      flex-wrap: wrap;
-      margin-top: 5rem;
+    @media (min-width: ${({ theme }) => theme.lg}) {
+      gap: 8rem;
+      margin-top: 8rem;
+      flex-wrap: nowrap;
     }
   }
 `;
@@ -33,13 +34,13 @@ export const KnowledgeContainer = styled.div`
   p {
     color: ${({ theme }) => theme.primary};
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: uppercase;
   }
 
   svg {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 5rem;
+    height: 5rem;
     color: ${({ theme }) => theme.secondary};
     transition: 0.3s;
 
@@ -49,14 +50,14 @@ export const KnowledgeContainer = styled.div`
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (min-width: ${({ theme }) => theme.md}) {
     p {
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
 
     svg {
-      width: 5rem;
-      height: 5rem;
+      width: 6.5rem;
+      height: 6.5rem;
     }
   }
 `;

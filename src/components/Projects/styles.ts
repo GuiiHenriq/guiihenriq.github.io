@@ -16,16 +16,17 @@ export const Container = styled.section`
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
 
-    @media (max-width: 1000px) {
-      gap: 2rem;
+    @media (min-width: ${({ theme }) => theme.lg}) {
+      gap: 4rem;
     }
   }
 
   > button {
     background: ${({ theme }) => theme.primary};
-    padding: 0.8rem 3rem;
+    padding: 1rem;
+
     border-radius: 0.5rem;
     border: none;
     transition: 0.5s;
@@ -33,7 +34,8 @@ export const Container = styled.section`
     a {
       text-transform: uppercase;
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1rem;
+
       font-weight: 300;
     }
 
@@ -41,11 +43,11 @@ export const Container = styled.section`
       background: ${({ theme }) => darken(0.05, theme.primary)};
     }
 
-    @media (max-width: 500px) {
-      padding: 1rem;
+    @media (min-width: ${({ theme }) => theme.md}) {
+      padding: 0.8rem 3rem;
 
       a {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
     }
   }
@@ -79,14 +81,14 @@ export const ProjectContainer = styled.div<ProjectProps>`
   }
 
   > button {
-    height: 4rem;
+    height: auto;
     margin: 0 0 3rem 5rem;
     background: none;
     border: none;
 
     a {
       font-weight: 300;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: #fff;
       display: flex;
       align-items: center;
@@ -121,13 +123,13 @@ export const ProjectContainer = styled.div<ProjectProps>`
         transition: 0.5s;
 
         h1 {
-          font-size: 2.5rem;
+          font-size: 1.5rem;
           color: ${({ theme }) => theme.primary};
           text-shadow: -4px 5px 22px #11172b;
         }
 
         h2 {
-          font-size: 2rem;
+          font-size: 1rem;
           font-weight: 300;
           color: ${({ theme }) => theme.secondary};
           text-shadow: -4px 5px 22px #11172b;
@@ -158,6 +160,33 @@ export const ProjectContainer = styled.div<ProjectProps>`
         > div {
           &.text {
             left: -12rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.md}) {
+  }
+
+  @media (min-width: ${({ theme }) => theme.lg}) {
+    > button {
+      height: 4rem;
+
+      a {
+        font-size: 2rem;
+      }
+    }
+
+    > section {
+      > div {
+        &.text {
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          h2 {
+            font-size: 2rem;
           }
         }
       }
@@ -225,30 +254,5 @@ export const ProjectContainer = styled.div<ProjectProps>`
 
   @media (max-width: 700px) {
     height: 17rem;
-  }
-
-  @media (max-width: 450px) {
-    > button {
-      height: auto;
-
-      a {
-        font-size: 1.5rem;
-        gap: 0.8rem;
-      }
-    }
-
-    > section {
-      > div {
-        &.text {
-          h1 {
-            font-size: 1.5rem;
-          }
-
-          h2 {
-            font-size: 1rem;
-          }
-        }
-      }
-    }
   }
 `;

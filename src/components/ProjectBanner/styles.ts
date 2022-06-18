@@ -6,11 +6,11 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   width: 100%;
-  height: 26rem;
+  height: 2rem 2.5rem;
   background: url(${props => props.img}) no-repeat center;
   background-size: cover;
   position: relative;
-  padding: 3rem 5rem;
+  padding: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,12 +36,12 @@ export const Container = styled.div<ContainerProps>`
 
     h1 {
       color: ${({ theme }) => theme.primary};
-      font-size: 3rem;
+      font-size: 1.8rem;
     }
 
     h2 {
       color: ${({ theme }) => theme.secondary};
-      font-size: 2rem;
+      font-size: 1.2rem;
       font-weight: 300;
     }
   }
@@ -59,17 +59,17 @@ export const Container = styled.div<ContainerProps>`
     }
   }
 
-  @media (max-width: 700px) {
-    height: 2rem 2.5rem;
-    padding: 20rem;
+  @media (min-width: ${({ theme }) => theme.md}) {
+    height: 26rem;
+    padding: 3rem 5rem;
 
     section {
       h1 {
-        font-size: 1.8rem;
+        font-size: 3rem;
       }
 
       h2 {
-        font-size: 1.2rem;
+        font-size: 2rem;
       }
     }
   }
