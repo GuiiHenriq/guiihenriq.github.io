@@ -2,10 +2,22 @@ import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  > p {
+  .disclaimer {
     margin-top: 2rem;
-    font-size: 2.5rem;
+    font-size: 1rem;
     color: ${({ theme }) => theme.textHighlight};
+  }
+
+  @media (min-width: ${({ theme }) => theme.md}) {
+    .disclaimer {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.lg}) {
+    .disclaimer {
+      font-size: 2.5rem;
+    }
   }
 `;
 

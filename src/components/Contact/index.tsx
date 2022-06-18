@@ -10,7 +10,7 @@ function Contact() {
         description="Send me a message in the form"
       />
 
-      <p>
+      <p className="disclaimer">
         or send me a message to the e-mail
         <br />
         erba.guilherme@gmail.com
