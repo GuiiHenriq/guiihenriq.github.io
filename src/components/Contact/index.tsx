@@ -10,6 +10,12 @@ function Contact() {
         description="Send me a message in the form"
       />
 
+      <p>
+        or send me a message to the e-mail
+        <br />
+        erba.guilherme@gmail.com
+      </p>
+
       <Form />
     </Container>
   );

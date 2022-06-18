@@ -7,6 +7,8 @@ export const ProjectsContainer = styled.div`
   height: 100%;
 
   > main {
+    margin-top: 5rem;
+
     > section {
       margin: 5rem auto;
       width: 100%;

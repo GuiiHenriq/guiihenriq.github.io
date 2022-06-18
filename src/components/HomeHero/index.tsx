@@ -25,7 +25,7 @@ function HomeHero() {
               Age: <span className="blue">23,</span>
             </div>
             <div>
-              Hobbies: <span className="blue">Games and Motorcycle speed,</span>
+              Hobbies: <span className="blue">Games and Motorcycle,</span>
             </div>
             {'\u007D'}
           </CodeItem>

@@ -46,9 +46,11 @@ export default function Project({ project }: ProjetcProps) {
       <main>
         <p>{project.description}</p>
 
-        <button type="button">
-          <a href={project.url}>View Project</a>
-        </button>
+        {project.url && (
+          <button type="button">
+            <a href={project.url}>View Project</a>
+          </button>
+        )}
       </main>
     </ProjectContainer>
   );

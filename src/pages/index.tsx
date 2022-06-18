@@ -40,7 +40,10 @@ export default function Home({ projects }: HomeProps) {
         <meta property="og:image:secure_url" content="/ogimage.png" />
         <meta name="twitter:image" content="/ogimage.png" />
         <meta name="twitter:image:src" content="/ogimage.png" />
-        <meta property="og:description" content="Description - Resume NextJS" />
+        <meta
+          property="og:description"
+          content="My personal website with Developed Projects, Experience, Skills, and more."
+        />
       </Head>
 
       <Header />

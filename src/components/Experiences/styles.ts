@@ -53,7 +53,7 @@ export const ItemContainer = styled.div`
       color: ${({ theme }) => theme.secondary};
       font-size: 1.5rem;
       font-weight: 300;
-      margin-top: 1rem;
+      margin: 1rem 0;
     }
 
     p {

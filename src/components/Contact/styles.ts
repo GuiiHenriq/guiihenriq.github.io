@@ -1,7 +1,13 @@
 import { darken } from 'polished';
 import styled from 'styled-components';
 
-export const Container = styled.section``;
+export const Container = styled.section`
+  > p {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: ${({ theme }) => theme.textHighlight};
+  }
+`;
 
 export const FormContainer = styled.form`
   width: 100%;

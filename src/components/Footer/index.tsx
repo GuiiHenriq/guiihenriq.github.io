@@ -1,8 +1,4 @@
-import {
-  AiOutlineGithub,
-  AiFillLinkedin,
-  AiOutlineFilePdf
-} from 'react-icons/ai';
+import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { Container } from './styles';
 
 function Footer() {
@@ -33,7 +29,6 @@ function Footer() {
               handleRedirect('https://www.linkedin.com/in/guilhermeerba/')
             }
           />
-          <AiOutlineFilePdf onClick={() => handleRedirect('/')} />
         </section>
       </div>
     </Container>
