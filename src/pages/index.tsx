@@ -34,16 +34,42 @@ export default function Home({ projects }: HomeProps) {
   return (
     <HomeContainer>
       <Head>
+        {/* Primary Meta Tags */}
         <title>Home | Guilherme Henrique</title>
+        <meta name="title" content="Guilherme Henrique | Front-end Developer" />
+        <meta
+          name="description"
+          content="I'm Guilherme Henrique, a Front-end developer with a passion for creating things, and in his spare time he enjoys playing games and riding motorcycles."
+        />
 
-        <meta property="og:image" content="/ogimage.png" />
-        <meta property="og:image:secure_url" content="/ogimage.png" />
-        <meta name="twitter:image" content="/ogimage.png" />
-        <meta name="twitter:image:src" content="/ogimage.png" />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://guihenrique.vercel.app/" />
+        <meta
+          property="og:title"
+          content="Guilherme Henrique | Front-end Developer"
+        />
         <meta
           property="og:description"
-          content="My personal website with Developed Projects, Experience, Skills, and more."
+          content="I'm Guilherme Henrique, a Front-end developer with a passion for creating things, and in his spare time he enjoys playing games and riding motorcycles."
         />
+        <meta property="og:image" content="/ogimage.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://guihenrique.vercel.app/"
+        />
+        <meta
+          property="twitter:title"
+          content="Guilherme Henrique | Front-end Developer"
+        />
+        <meta
+          property="twitter:description"
+          content="I'm Guilherme Henrique, a Front-end developer with a passion for creating things, and in his spare time he enjoys playing games and riding motorcycles."
+        />
+        <meta property="twitter:image" content="/ogimage.png" />
       </Head>
 
       <Header />
