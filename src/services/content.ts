@@ -68,5 +68,15 @@ export const data = [
     url: 'https://cotacao-freela.netlify.app/',
     thumbnail:
       'https://images.prismic.io/guiihenriq/9e513e47-f198-441d-8505-563cacac7ed1_screen-cotacao-freela.jpg?auto=compress,format'
+  },
+  {
+    slug: 'technical-challenges',
+    title: 'Technical Challenges',
+    type: 'Repository',
+    description:
+      'This repository is to gather all the technical challenges that I developed, through it you can follow my evolution as a front-end developer and analyze some solutions that I used.',
+    url: 'https://github.com/GuiiHenriq/testes-tecnicos',
+    thumbnail:
+      'https://images.prismic.io/guiihenriq/78b9c714-26ca-452b-9f50-0d61b5446ae3_screen-code.png?auto=compress,format'
   }
 ];
