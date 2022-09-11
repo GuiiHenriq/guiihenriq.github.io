@@ -26,7 +26,7 @@ function About() {
         <br />
         <br />
         In the year 2021, I graduated in Systems Analysis and Development, and
-        whenever I have time do spare, I spend some of it studying and learning
+        whenever I have time to spare, I spend some of it studying and learning
         new tools and technologies.
       </h2>
     </Container>
