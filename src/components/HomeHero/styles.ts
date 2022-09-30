@@ -9,7 +9,7 @@ export const Container = styled.section`
   flex-direction: column-reverse;
   margin-top: 5rem;
 
-  > img {
+  > svg {
     width: 40rem;
     flex: 1;
   }
@@ -22,13 +22,13 @@ export const Container = styled.section`
   @media (min-width: ${({ theme }) => theme.md}) {
     flex-direction: row;
 
-    > img {
+    > svg {
       width: 22rem;
     }
   }
 
   @media (min-width: ${({ theme }) => theme.lg}) {
-    > img {
+    > svg {
       width: 30rem;
     }
 

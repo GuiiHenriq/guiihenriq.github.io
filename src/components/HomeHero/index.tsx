@@ -1,10 +1,10 @@
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
-import AssetWeb from '../../assets/asset-web.png';
+import AssetWeb from '../../assets/code.svg';
 
 function HomeHero() {
   return (
     <Container data-aos="fade-up">
-      <img src={AssetWeb} alt="Guilherme Henrique" />
+      <AssetWeb />
 
       <div>
         <TextContainer>
