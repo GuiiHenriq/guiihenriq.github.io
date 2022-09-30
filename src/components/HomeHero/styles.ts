@@ -10,7 +10,7 @@ export const Container = styled.section`
   margin-top: 5rem;
 
   > svg {
-    width: 40rem;
+    width: 20rem;
     flex: 1;
   }
 
