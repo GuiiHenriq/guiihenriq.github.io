@@ -9,7 +9,7 @@ function HomeHero() {
       <div>
         <TextContainer>
           <h1>Hi</h1>
-          <h2>I am Guilherme Henrique</h2>
+          <h2>I am Guilherme Henrique 👋</h2>
         </TextContainer>
 
         <InfosContainer>
@@ -19,13 +19,16 @@ function HomeHero() {
             </span>
             <span className="purple">Infos</span> {'\u007B'}
             <div>
-              Name: <span className="blue">Guilherme Henrique,</span>
+              Name: <span className="blue">Guilherme Henrique 🧑‍💻,</span>
             </div>
             <div>
-              Age: <span className="blue">23,</span>
+              Age: <span className="blue">23 🙍‍♂️,</span>
             </div>
             <div>
-              Hobbies: <span className="blue">Games and Motorcycle,</span>
+              Country: <span className="blue">Brazil 🇧🇷,</span>
+            </div>
+            <div>
+              Hobbies: <span className="blue">Motorcycle 🏍️</span>
             </div>
             {'\u007D'}
           </CodeItem>
@@ -45,7 +48,7 @@ function HomeHero() {
               Working with: <span className="blue">Vue,</span>
             </div>
             <div>
-              Studying: <span className="blue">Next/Nuxt and Web3,</span>
+              Studying: <span className="blue">Next/Nuxt and Web3</span>
             </div>
             {'\u007D'}
           </CodeItem>

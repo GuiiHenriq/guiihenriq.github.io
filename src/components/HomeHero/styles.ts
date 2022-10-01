@@ -81,17 +81,23 @@ export const CodeItem = styled.pre`
   align-self: flex-start;
   transition: 1s !important;
 
+  > div {
+    margin: 0.2rem 0 0.2rem 1rem;
+    white-space: normal;
+  }
+
+  &:first-child {
+    div {
+      margin: 0 0 0 1rem;
+    }
+  }
+
   &:last-child {
     align-self: flex-end;
   }
 
   &:hover {
     filter: brightness(1.5);
-  }
-
-  > div {
-    margin: 0.2rem 0;
-    margin-left: 1rem;
   }
 
   span {
