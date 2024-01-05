@@ -1,8 +1,11 @@
-const withImages = require('next-images');
-
-module.exports = withImages({
-  esModule: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
   images: {
-    disableStaticImages: true
-  }
-});
+    domains: ['media.graphassets.com'],
+  },
+}
+
+module.exports = nextConfig
