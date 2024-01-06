@@ -1,7 +1,7 @@
 import { SkillsTechs } from './components/skills-techs'
 import { HeroSection } from './components/pages/home/hero-section'
 import { HighlightedProjects } from './components/pages/home/highlighted-projects'
-SkillsTechs
+import { WorkExperience } from './components/pages/home/work-experience'
 
 export default async function Home() {
   return (
@@ -9,6 +9,7 @@ export default async function Home() {
       <HeroSection />
       <SkillsTechs />
       <HighlightedProjects />
+      <WorkExperience />
     </>
   )
 }
