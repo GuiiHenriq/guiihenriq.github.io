@@ -4,33 +4,15 @@ import { TechBadge } from '@/app/components/tech-badge'
 import Image from 'next/image'
 import { Button } from '@/app/components/button'
 import { HiArrowNarrowRight } from 'react-icons/hi'
-import {
-  TbBrandGithub,
-  TbBrandLinkedin,
-  TbBrandWhatsapp,
-  TbBrandYoutube,
-} from 'react-icons/tb'
+import { HomePageInfo } from '@/app/types/page-info'
+import { RichText } from '@/app/components/rich-text'
+import { CMSIcon } from '@/app/components/cms-icon'
 
-const MOCK_CONTACTS = [
-  {
-    url: 'https://github.com/GuiiHenriq',
-    icon: <TbBrandGithub />,
-  },
-  {
-    url: 'https://www.linkedin.com/in/guilhermeerba/',
-    icon: <TbBrandLinkedin />,
-  },
-  {
-    url: 'https://www.linkedin.com/in/guilhermeerba/',
-    icon: <TbBrandWhatsapp />,
-  },
-  {
-    url: 'https://www.linkedin.com/in/guilhermeerba/',
-    icon: <TbBrandYoutube />,
-  },
-]
+type HomeSectionProps = {
+  homeInfo: HomePageInfo
+}
 
-export const HeroSection = () => {
+export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
   const handleContact = () => {
     const contactSection = document.querySelector('#contact')
     if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' })
@@ -43,16 +25,13 @@ export const HeroSection = () => {
           <p className="font-mono text-emerald-400">Hi, my name is</p>
           <h2 className="text-4xl font-medium mt-2">Guilherme Henrique</h2>
 
-          <p className="text-gray-400 my-6 text-sm sm:text-base">
-            My story with programming started around the year 2010. I had been
-            exploring the world of programming for fun since I was 10 years old
-            by creating a blog, websites in HTML and CSS, developing a form
-            system in PHP and several other projects.
-          </p>
+          <div className="text-gray-400 my-6 text-sm sm:text-base">
+            <RichText content={homeInfo.introduction.raw} />
+          </div>
 
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <TechBadge name="NextJSS" />
+            {homeInfo.introTechs.map((tech) => (
+              <TechBadge name={tech.name} />
             ))}
           </div>
 
@@ -62,14 +41,14 @@ export const HeroSection = () => {
             </Button>
 
             <div className="flex items-center h-20 gap-3 text-2xl text-gray-600">
-              {MOCK_CONTACTS.map((contact, index) => (
+              {homeInfo.socials.map((contact, index) => (
                 <a
                   href={contact.url}
                   key={`contact-${index}`}
                   target="_blank"
                   className="hover:text-gray-100 transition-colors"
                 >
-                  {contact.icon}
+                  <CMSIcon icon={contact.icon} />
                 </a>
               ))}
             </div>
@@ -78,10 +57,10 @@ export const HeroSection = () => {
 
         <Image
           width={420}
-          height={404}
-          src="/images/profile-pic.png"
+          height={420}
+          src={homeInfo.profilePicture.url}
           alt="Foto Guilherme Henrique"
-          className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover"
+          className="w-[300px] h-[300px] lg:w-[420px] lg:h-[420px] mb-6 lg:mb-0 shadow-2xl rounded-full object-cover"
         />
       </div>
     </section>
