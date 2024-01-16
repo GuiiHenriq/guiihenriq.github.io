@@ -2,12 +2,18 @@ import { TechBadge } from '@/app/components/tech-badge'
 import Image from 'next/image'
 import { Link } from '@/app/components/link'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import { Project } from '@/app/types/projects'
 
-type HorizontalDividerProps = {
+/*type HorizontalDividerProps = {
   className?: string
+}*/
+
+type ProjectCardProps = {
+  project: Project
 }
 
-export const ProjectCard = ({ className }: HorizontalDividerProps) => {
+//export const ProjectCard = ({ className }: HorizontalDividerProps) => {
+export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className="flex gap-6 lg:gap-12 flex-col lg:flex-row">
       <div className="w-full h-full">
@@ -15,8 +21,8 @@ export const ProjectCard = ({ className }: HorizontalDividerProps) => {
           width={420}
           height={304}
           className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg"
-          src="https://media.graphassets.com/vyKTccMSONtRMaGtPF3w"
-          alt="Thumbnail of project"
+          src={project.thumbnail.url}
+          alt={`Thumbnail of project ${project.title}`}
         />
       </div>
 
@@ -28,25 +34,21 @@ export const ProjectCard = ({ className }: HorizontalDividerProps) => {
             src="/images/icons/project-title-icon.svg"
             alt="Icon of project"
           />
-          Book Wise
+          {project.title}
         </h3>
 
-        <p className="text-gray-400 my-6">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio,
-          hic totam saepe ab natus, possimus, officiis ipsa minima quisquam
-          accusamus modi nihil sint laborum est repellendus eligendi. Quos odio
-          ipsa nostrum ad, maxime quas corporis eos ipsum quibusdam quam animi,
-          aut nam nobis cum?
-        </p>
+        <p className="text-gray-400 my-6">{project.shortDescription}</p>
 
         <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[350px]">
-          <TechBadge name="NextJS" />
-          <TechBadge name="NextJS" />
-          <TechBadge name="NextJS" />
-          <TechBadge name="NextJS" />
+          {project.techs.map((tech) => (
+            <TechBadge
+              key={`${project.title}-tech-${tech.name}`}
+              name={tech.name}
+            />
+          ))}
         </div>
 
-        <Link href="/projects/book-wise">
+        <Link href={`/projects/${project.slug}`}>
           View more <HiArrowNarrowRight />
         </Link>
       </div>

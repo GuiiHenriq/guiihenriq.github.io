@@ -19,13 +19,11 @@ export const Header = () => {
   return (
     <header className="absolute top-0 w-full z-10 h-24 flex items-center justify-center">
       <div className="container flex items-center justify-between">
-        <Link href="/">
-          <Image
-            width={58}
-            height={49}
-            src="/images/logo.svg"
-            alt="Logo Gui Henrique"
-          />
+        <Link
+          href="/"
+          className="font-bold text-4xl text-emerald-400 drop-shadow-lg hover:text-emerald-300 transition-colors"
+        >
+          GH
         </Link>
 
         <nav className="flex items-center gap-4 sm:gap-10">
