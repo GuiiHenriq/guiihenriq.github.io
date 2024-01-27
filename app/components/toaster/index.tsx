@@ -9,12 +9,12 @@ export const Toaster = () => {
       toastOptions={{
         success: {
           style: {
-            background: '#10b981',
+            background: '#06b6d4',
             color: '#fff',
           },
           iconTheme: {
             primary: '#fff',
-            secondary: '#10b981',
+            secondary: '#06b6d4',
           },
         },
         error: {

@@ -21,7 +21,7 @@ export const Header = () => {
       <div className="container flex items-center justify-between">
         <Link
           href="/"
-          className="font-bold text-4xl text-emerald-400 drop-shadow-lg hover:text-emerald-500 transition-colors"
+          className="font-bold text-4xl text-cyan-400 drop-shadow-lg hover:text-cyan-500 transition-colors"
         >
           GH
         </Link>

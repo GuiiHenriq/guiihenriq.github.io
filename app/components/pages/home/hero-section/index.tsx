@@ -22,7 +22,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
     <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
       <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
         <div className="w-full lg:max-w-[530px]">
-          <p className="font-mono text-emerald-400">Hi, my name is</p>
+          <p className="font-mono text-cyan-400">Hi, my name is</p>
           <h2 className="text-4xl font-medium mt-2">Guilherme Henrique</h2>
 
           <div className="text-gray-400 my-6 text-sm sm:text-base">
