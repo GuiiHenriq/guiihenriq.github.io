@@ -5,6 +5,13 @@ import { Header } from './components/header'
 import { ContactForm } from './components/contact-form'
 import { Footer } from './components/footer'
 
+export const metadata = {
+  title: {
+    default: 'Home',
+    template: '%s | Guilherme Henrique',
+  },
+}
+
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
