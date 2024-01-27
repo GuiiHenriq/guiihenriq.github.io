@@ -1,7 +1,47 @@
+import { RichText } from '@/app/components/rich-text'
 import { TechBadge } from '@/app/components/tech-badge'
+import { WorkExperience } from '@/app/types/work-experiences'
+import ptBR from 'date-fns/locale/pt-BR'
 import Image from 'next/image'
+import { differenceInMonths, differenceInYears, format } from 'date-fns'
 
-export const ExperienceItem = () => {
+type ExperienceItemProps = {
+  experience: WorkExperience
+}
+
+export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
+  const {
+    endDate,
+    companyName,
+    companyLogo,
+    companyUrl,
+    description,
+    role,
+    techs,
+  } = experience
+
+  const startDate = new Date(experience.startDate)
+
+  const formattedStartDate = format(startDate, 'MMM yyyy', { locale: ptBR })
+  const formattedEndDate = endDate
+    ? format(new Date(endDate), 'MMM yyyy', { locale: ptBR })
+    : 'Present'
+
+  const end = endDate ? new Date(endDate) : new Date()
+
+  const months = differenceInMonths(end, startDate)
+  const years = differenceInYears(end, startDate)
+  const monthsRemaining = months % 12
+
+  const formattedDuration =
+    years > 0
+      ? `${years} ano${years > 1 ? 's' : ''}${
+          monthsRemaining > 0
+            ? ` e ${monthsRemaining} mes${monthsRemaining > 1 ? 'es' : ''}`
+            : ''
+        }`
+      : `${months} mes${months > 1 ? 'es' : ''}`
+
   return (
     <div className="grid grid-cols-[40px,1fr] gap-4 md:gap-10">
       <div className="flex flex-col items-center gap-4">
@@ -10,8 +50,8 @@ export const ExperienceItem = () => {
             width={40}
             height={40}
             className="rounded-full"
-            src="https://media.graphassets.com/Q4lS2mPkT4Kw3BHM6Ba5"
-            alt="Logo da Empresa"
+            src={companyLogo.url}
+            alt={`${companyName} Company Logo`}
           />
         </div>
 
@@ -21,31 +61,31 @@ export const ExperienceItem = () => {
       <div>
         <div className="flex flex-col gap-2 text-sm sm:text-base">
           <a
-            href="https://www.linkedin.com/in/guilhermeerba/"
+            href={companyUrl}
             target="_blank"
             className="text-gray-500 hover:text-emerald-500 transition-colors"
           >
-            @ Compass.UOL
+            @ {companyName}
           </a>
-          <h4 className="text-gray-300">Front-end Developer</h4>
+          <h4 className="text-gray-300">{role}</h4>
           <span className="text-gray-500">
-            out 2022 • O momento • (1 ano e 3 meses)
+            {formattedStartDate} • {formattedEndDate} • ({formattedDuration})
           </span>
-          <p className="text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
-            unde saepe aut earum modi deleniti ex nulla et porro dicta veritatis
-            totam, eius non facere sunt autem nisi obcaecati. Odit.
-          </p>
+          <div className="text-gray-400">
+            <RichText content={description.raw} />
+          </div>
         </div>
 
         <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">
           Competências
         </p>
         <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8">
-          <TechBadge name="AEM" />
-          <TechBadge name="AEM" />
-          <TechBadge name="AEM" />
-          <TechBadge name="AEM" />
+          {techs.map((tech) => (
+            <TechBadge
+              key={`experience-${companyName}-tech-${tech.name}`}
+              name={tech.name}
+            />
+          ))}
         </div>
       </div>
     </div>

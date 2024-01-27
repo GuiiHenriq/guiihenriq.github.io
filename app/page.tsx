@@ -38,21 +38,21 @@ const getPageData = async (): Promise<HomePageData> => {
             name
           }
         }
-        workExperiences {
-          companyLogo {
-            url
-          }
-          role
-          companyName
-          companyUrl
-          startDate
-          endDate
-          description {
-            raw
-          }
-          techs {
-            name
-          }
+      }
+      workExperiences {
+        companyLogo {
+          url
+        }
+        role
+        companyName
+        companyUrl
+        startDate
+        endDate
+        description {
+          raw
+        }
+        techs {
+          name
         }
       }
     }
@@ -62,7 +62,7 @@ const getPageData = async (): Promise<HomePageData> => {
 }
 
 export default async function Home() {
-  const { page: pageData } = await getPageData()
+  const { page: pageData, workExperiences } = await getPageData()
 
   console.log(pageData)
 
@@ -71,7 +71,7 @@ export default async function Home() {
       <HeroSection homeInfo={pageData} />
       <SkillsTechs skills={pageData.skillsTechs} />
       <HighlightedProjects projects={pageData.highlightProjects} />
-      <WorkExperience />
+      <WorkExperience experiences={workExperiences} />
     </>
   )
 }
