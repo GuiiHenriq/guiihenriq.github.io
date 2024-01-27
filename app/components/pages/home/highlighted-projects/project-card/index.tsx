@@ -4,15 +4,10 @@ import { Link } from '@/app/components/link'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Project } from '@/app/types/projects'
 
-/*type HorizontalDividerProps = {
-  className?: string
-}*/
-
 type ProjectCardProps = {
   project: Project
 }
 
-//export const ProjectCard = ({ className }: HorizontalDividerProps) => {
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className="flex gap-6 lg:gap-12 flex-col lg:flex-row">
