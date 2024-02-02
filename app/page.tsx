@@ -4,6 +4,7 @@ import { HighlightedProjects } from './components/pages/home/highlighted-project
 import { WorkExperience } from './components/pages/home/work-experience'
 import { fetchHygraphQuery } from './utils/fetch-hygraph-query'
 import { HomePageData } from './types/page-info'
+import Head from 'next/head'
 
 export const metadata = {
   title: 'Guilherme Henrique',
@@ -68,10 +69,46 @@ const getPageData = async (): Promise<HomePageData> => {
 export default async function Home() {
   const { page: pageData, workExperiences } = await getPageData()
 
-  console.log(pageData)
-
   return (
     <>
+      <Head>
+        {/* Primary Meta Tags */}
+        <meta name="title" content="Guilherme Henrique | Front end Developer" />
+        <meta
+          name="description"
+          content="I'm Guilherme Henrique, a passionate software developer with more than 6 years of experience, immersed in the exciting universe of web creation, with a strong background in developing and implementing innovative solutions. My journey in this fascinating field has been marked by stimulating challenges and the relentless pursuit of technical excellence."
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://guihenrique.vercel.app/" />
+        <meta
+          property="og:title"
+          content="Guilherme Henrique | Front end Developer"
+        />
+        <meta
+          property="og:description"
+          content="I'm Guilherme Henrique, a passionate software developer with more than 6 years of experience, immersed in the exciting universe of web creation, with a strong background in developing and implementing innovative solutions. My journey in this fascinating field has been marked by stimulating challenges and the relentless pursuit of technical excellence."
+        />
+        <meta property="og:image" content="/ogimage.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://guihenrique.vercel.app/"
+        />
+        <meta
+          property="twitter:title"
+          content="Guilherme Henrique | Front end Developer"
+        />
+        <meta
+          property="twitter:description"
+          content="I'm Guilherme Henrique, a passionate software developer with more than 6 years of experience, immersed in the exciting universe of web creation, with a strong background in developing and implementing innovative solutions. My journey in this fascinating field has been marked by stimulating challenges and the relentless pursuit of technical excellence."
+        />
+        <meta property="twitter:image" content="/ogimage.png" />
+      </Head>
+
       <HeroSection homeInfo={pageData} />
       <SkillsTechs skills={pageData.skillsTechs} />
       <HighlightedProjects projects={pageData.highlightProjects} />
