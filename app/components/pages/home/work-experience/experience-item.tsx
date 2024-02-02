@@ -1,7 +1,7 @@
 import { RichText } from '@/app/components/rich-text'
 import { TechBadge } from '@/app/components/tech-badge'
 import { WorkExperience } from '@/app/types/work-experiences'
-import ptBR from 'date-fns/locale/pt-BR'
+import enUS from 'date-fns/locale/en-US'
 import Image from 'next/image'
 import { differenceInMonths, differenceInYears, format } from 'date-fns'
 
@@ -22,9 +22,9 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
 
   const startDate = new Date(experience.startDate)
 
-  const formattedStartDate = format(startDate, 'MMM yyyy', { locale: ptBR })
+  const formattedStartDate = format(startDate, 'MMM yyyy', { locale: enUS })
   const formattedEndDate = endDate
-    ? format(new Date(endDate), 'MMM yyyy', { locale: ptBR })
+    ? format(new Date(endDate), 'MMM yyyy', { locale: enUS })
     : 'Present'
 
   const end = endDate ? new Date(endDate) : new Date()
@@ -35,12 +35,12 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
 
   const formattedDuration =
     years > 0
-      ? `${years} ano${years > 1 ? 's' : ''}${
+      ? `${years} year${years > 1 ? 's' : ''}${
           monthsRemaining > 0
-            ? ` e ${monthsRemaining} mes${monthsRemaining > 1 ? 'es' : ''}`
+            ? ` and ${monthsRemaining} month${monthsRemaining > 1 ? 's' : ''}`
             : ''
         }`
-      : `${months} mes${months > 1 ? 'es' : ''}`
+      : `${months} month${months > 1 ? 's' : ''}`
 
   return (
     <div className="grid grid-cols-[40px,1fr] gap-4 md:gap-10">
@@ -76,9 +76,7 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
           </div>
         </div>
 
-        <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">
-          Competências
-        </p>
+        <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">Skills</p>
         <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8">
           {techs.map((tech) => (
             <TechBadge
