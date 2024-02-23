@@ -8,6 +8,31 @@ import Head from 'next/head'
 
 export const metadata = {
   title: 'Guilherme Henrique',
+  description:
+    "I'm Guilherme Henrique, a passionate software developer with more than 6 years of experience, immersed in the exciting universe of web creation, with a strong background in developing and implementing innovative solutions. My journey in this fascinating field has been marked by stimulating challenges and the relentless pursuit of technical excellence.",
+  openGraph: {
+    title: 'Guilherme Henrique | Front end Developer',
+    description:
+      "I'm Guilherme Henrique, a passionate software developer with more than 6 years of experience, immersed in the exciting universe of web creation, with a strong background in developing and implementing innovative solutions. My journey in this fascinating field has been marked by stimulating challenges and the relentless pursuit of technical excellence.",
+    url: 'https://guihenrique.vercel.app/',
+    siteName: 'Guilherme Henrique',
+    type: 'website',
+    images: [
+      {
+        url: 'https://raw.githubusercontent.com/GuiiHenriq/guiihenriq.github.io/main/public/ogimage.png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Guilherme Henrique | Front end Developer',
+    url: 'https://guihenrique.vercel.app/',
+    description:
+      "I'm Guilherme Henrique, a passionate software developer with more than 6 years of experience, immersed in the exciting universe of web creation, with a strong background in developing and implementing innovative solutions. My journey in this fascinating field has been marked by stimulating challenges and the relentless pursuit of technical excellence.",
+    images: [
+      'https://raw.githubusercontent.com/GuiiHenriq/guiihenriq.github.io/main/public/ogimage.png',
+    ],
+  },
 }
 
 const getPageData = async (): Promise<HomePageData> => {
