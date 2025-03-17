@@ -41,21 +41,47 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   }
   `
 
-  return fetchHygraphQuery(
-    query,
-    60 * 60 * 24 // 24 hours
-  )
+  try {
+    const data = await fetchHygraphQuery<ProjectPageData>(
+      query,
+      60 * 60 * 24 // 24 hours
+    )
+    
+    return data
+  } catch (error) {
+    console.error(`Error fetching project with slug "${slug}":`, error)
+    return { project: null }
+  }
 }
 
 export default async function Project({ params: { slug } }: ProjectProps) {
-  const { project } = await getProjectDetails(slug)
+  try {
+    const data = await getProjectDetails(slug)
 
-  return (
-    <>
-      <ProjectDetails project={project} />
-      <ProjectSections sections={project.sections} />
-    </>
-  )
+    if (!data || !data.project) {
+      return (
+        <div className="container flex flex-col items-center justify-center py-20">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">Project Not Found</h1>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">The requested project could not be found.</p>
+        </div>
+      )
+    }
+
+    return (
+      <>
+        <ProjectDetails project={data.project} />
+        <ProjectSections sections={data.project.sections} />
+      </>
+    )
+  } catch (error) {
+    console.error(`Error rendering project with slug "${slug}":`, error)
+    return (
+      <div className="container flex flex-col items-center justify-center py-20">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">Error Loading Project</h1>
+        <p className="mt-4 text-gray-600 dark:text-gray-400">There was an error loading the project details.</p>
+      </div>
+    )
+  }
 }
 
 export async function generateStaticParams() {
@@ -75,20 +101,34 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params: { slug },
 }: ProjectProps): Promise<Metadata> {
-  const data = await getProjectDetails(slug)
-  const project = data.project
+  try {
+    const data = await getProjectDetails(slug)
+    
+    if (!data || !data.project) {
+      return {
+        title: 'Project Not Found',
+        description: 'The requested project could not be found.',
+      }
+    }
 
-  return {
-    title: project.title,
-    description: project.description.text,
-    openGraph: {
-      images: [
-        {
-          url: project.thumbnail.url,
-          width: 1200,
-          height: 630,
-        },
-      ],
-    },
+    return {
+      title: data.project.title,
+      description: data.project.description.text,
+      openGraph: {
+        images: [
+          {
+            url: data.project.thumbnail.url,
+            width: 1200,
+            height: 630,
+          },
+        ],
+      },
+    }
+  } catch (error) {
+    console.error(`Error generating metadata for project with slug "${slug}":`, error)
+    return {
+      title: 'Error Loading Project',
+      description: 'There was an error loading the project details.',
+    }
   }
 }
