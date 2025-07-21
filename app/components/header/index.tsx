@@ -13,6 +13,10 @@ const NAV_ITEMS = [
     label: 'Projects',
     href: '/projects',
   },
+  {
+    label: 'Blog',
+    href: '/blog',
+  },
 ]
 
 export const Header = () => {
