@@ -1,11 +1,17 @@
 {
-  "extends": [
-    "@rocketseat/eslint-config/react",
-    "next/core-web-vitals"
-  ],
+  "extends": ["@rocketseat/eslint-config/react", "next/core-web-vitals"],
   "rules": {
     "camelcase": "off",
     "no-unused-vars": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "es5"
+      }
+    ]
   }
 }
