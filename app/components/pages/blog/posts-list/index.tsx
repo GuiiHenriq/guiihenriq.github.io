@@ -16,4 +16,4 @@ export const BlogPostsList = ({ posts }: BlogPostsListProps) => {
       ))}
     </section>
   )
-} 
+}

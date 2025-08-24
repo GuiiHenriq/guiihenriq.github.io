@@ -3,7 +3,7 @@ import type { Post } from '../types/posts'
 
 export async function fetchPostBySlug(slug: string): Promise<Post | null> {
   const query = `{
-    post(where: { slug: \"${slug}\" }) {
+    post(where: { slug: "${slug}" }) {
       title
       slug
       excerpt
@@ -14,4 +14,4 @@ export async function fetchPostBySlug(slug: string): Promise<Post | null> {
   }`
   const data = await fetchHygraphQuery<{ post: Post | null }>(query)
   return data.post
-} 
+}

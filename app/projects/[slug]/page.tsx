@@ -46,7 +46,7 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
       query,
       60 * 60 * 24 // 24 hours
     )
-    
+
     return data
   } catch (error) {
     console.error(`Error fetching project with slug "${slug}":`, error)
@@ -61,8 +61,12 @@ export default async function Project({ params: { slug } }: ProjectProps) {
     if (!data || !data.project) {
       return (
         <div className="container flex flex-col items-center justify-center py-20">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">Project Not Found</h1>
-          <p className="mt-4 text-gray-600 dark:text-gray-400">The requested project could not be found.</p>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
+            Project Not Found
+          </h1>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">
+            The requested project could not be found.
+          </p>
         </div>
       )
     }
@@ -77,8 +81,12 @@ export default async function Project({ params: { slug } }: ProjectProps) {
     console.error(`Error rendering project with slug "${slug}":`, error)
     return (
       <div className="container flex flex-col items-center justify-center py-20">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">Error Loading Project</h1>
-        <p className="mt-4 text-gray-600 dark:text-gray-400">There was an error loading the project details.</p>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
+          Error Loading Project
+        </h1>
+        <p className="mt-4 text-gray-600 dark:text-gray-400">
+          There was an error loading the project details.
+        </p>
       </div>
     )
   }
@@ -103,7 +111,7 @@ export async function generateMetadata({
 }: ProjectProps): Promise<Metadata> {
   try {
     const data = await getProjectDetails(slug)
-    
+
     if (!data || !data.project) {
       return {
         title: 'Project Not Found',
@@ -125,7 +133,10 @@ export async function generateMetadata({
       },
     }
   } catch (error) {
-    console.error(`Error generating metadata for project with slug "${slug}":`, error)
+    console.error(
+      `Error generating metadata for project with slug "${slug}":`,
+      error
+    )
     return {
       title: 'Error Loading Project',
       description: 'There was an error loading the project details.',

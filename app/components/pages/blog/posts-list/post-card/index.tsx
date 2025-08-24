@@ -24,13 +24,11 @@ export const BlogPostCard = ({ post }: BlogPostCardProps) => {
         <strong className="font-medium text-gray-50/90 group-hover:text-cyan-500 transition-all">
           {post.title}
         </strong>
-        <p className="mt-2 text-gray-400 line-clamp-4">
-          {post.excerpt}
-        </p>
+        <p className="mt-2 text-gray-400 line-clamp-4">{post.excerpt}</p>
         <span className="text-gray-300 text-sm font-medium block mt-auto truncate">
           {new Date(post.createdAt).toLocaleDateString('pt-BR')}
         </span>
       </div>
     </div>
   )
-} 
+}

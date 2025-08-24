@@ -13,8 +13,8 @@ export const PageIntroduction = () => {
 
       <div className="flex flex-col items-center">
         <p className="text-gray-400 text-center max-w-[640px] my-6 text-sm sm:text-base">
-          Here you can see some of the projects I've developed. Feel free to
-          browse and explore the projects to see how they were created, the
+          Here you can see some of the projects I&apos;ve developed. Feel free
+          to browse and explore the projects to see how they were created, the
           technologies used, and the implemented features.
         </p>
 

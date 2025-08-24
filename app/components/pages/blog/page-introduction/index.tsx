@@ -12,7 +12,8 @@ export const BlogPageIntroduction = () => {
       />
       <div className="flex flex-col items-center">
         <p className="text-gray-400 text-center max-w-[640px] my-6 text-sm sm:text-base">
-          Here you will find articles, news and content about technology, programming and my learnings.
+          Here you will find articles, news and content about technology,
+          programming and my learnings.
         </p>
         <Link href="/">
           <HiArrowNarrowLeft size={20} />
@@ -21,4 +22,4 @@ export const BlogPageIntroduction = () => {
       </div>
     </section>
   )
-} 
+}

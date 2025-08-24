@@ -12,4 +12,4 @@ export type Post = {
     url: string
   }
   createdAt: string // Campo padrão do Hygraph para data de criação
-} 
+}

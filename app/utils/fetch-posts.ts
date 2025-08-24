@@ -6,10 +6,13 @@ export type FetchPostsOptions = {
   search?: string
 }
 
-export async function fetchPosts({ orderBy = 'createdAt_DESC', search }: FetchPostsOptions = {}): Promise<Post[]> {
+export async function fetchPosts({
+  orderBy = 'createdAt_DESC',
+  search,
+}: FetchPostsOptions = {}): Promise<Post[]> {
   let filter = ''
   if (search) {
-    filter = `where: { OR: [ { title_contains: \"${search}\" }, { excerpt_contains: \"${search}\" } ] }`
+    filter = `where: { OR: [ { title_contains: "${search}" }, { excerpt_contains: "${search}" } ] }`
   }
   const query = `{
     posts(orderBy: ${orderBy}${filter ? `, ${filter}` : ''}) {
@@ -23,4 +26,4 @@ export async function fetchPosts({ orderBy = 'createdAt_DESC', search }: FetchPo
   }`
   const data = await fetchHygraphQuery<{ posts: Post[] }>(query)
   return data.posts
-} 
+}

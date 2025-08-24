@@ -1,7 +1,7 @@
 import { RichText } from '@/app/components/rich-text'
 import { TechBadge } from '@/app/components/tech-badge'
 import { WorkExperience } from '@/app/types/work-experiences'
-import enUS from 'date-fns/locale/en-US'
+import { enUS } from 'date-fns/locale'
 import Image from 'next/image'
 import { differenceInMonths, differenceInYears, format } from 'date-fns'
 
