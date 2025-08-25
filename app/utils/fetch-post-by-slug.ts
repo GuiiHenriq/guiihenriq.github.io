@@ -12,6 +12,6 @@ export async function fetchPostBySlug(slug: string): Promise<Post | null> {
       createdAt
     }
   }`
-  const data = await fetchHygraphQuery<{ post: Post | null }>(query)
+  const data = await fetchHygraphQuery<{ post: Post | null }>(query, 300) // 5 minutos
   return data.post
 }

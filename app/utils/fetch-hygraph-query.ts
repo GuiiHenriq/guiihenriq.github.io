@@ -12,6 +12,7 @@ export const fetchHygraphQuery = async <T>(
     body: JSON.stringify({ query }),
     next: {
       revalidate,
+      tags: ['hygraph'],
     },
   })
 

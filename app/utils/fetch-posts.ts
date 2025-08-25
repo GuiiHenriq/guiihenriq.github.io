@@ -24,6 +24,6 @@ export async function fetchPosts({
       createdAt
     }
   }`
-  const data = await fetchHygraphQuery<{ posts: Post[] }>(query)
+  const data = await fetchHygraphQuery<{ posts: Post[] }>(query, 300) // 5 minutos
   return data.posts
 }
