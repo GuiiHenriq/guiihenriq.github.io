@@ -40,45 +40,42 @@ export const ContactForm = () => {
   return (
     <section
       id="contact"
-      className="py-16 px-6 md:py-32 flex items-center justify-center bg-gray-950"
+      className="py-16 container"
     >
       <div className="w-full max-w-[420px] mx-auto">
-        <SectionTitle
-          subtitle="contact"
-          title="Contact me"
-          className="items-center text-center"
-        />
+        <h2 className="text-2xl font-display text-center mb-2">get in touch</h2>
+        <p className="text-zinc-400 text-center mb-8">Let's work together!</p>
 
         <form
-          className="mt-12 w-full flex flex-col gap-4"
+          className="w-full flex flex-col gap-4"
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
             type="text"
             placeholder="Name"
-            className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-cyan-600"
+            className="w-full h-12 bg-zinc-800/50 rounded-lg placeholder:text-zinc-400 text-zinc-100 p-4 focus:outline-none focus:ring-2 ring-zinc-600 border border-zinc-700"
             {...register('name')}
           />
 
           <input
             type="text"
             placeholder="E-mail"
-            className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-cyan-600"
+            className="w-full h-12 bg-zinc-800/50 rounded-lg placeholder:text-zinc-400 text-zinc-100 p-4 focus:outline-none focus:ring-2 ring-zinc-600 border border-zinc-700"
             {...register('email')}
           />
 
           <textarea
             placeholder="Message"
             maxLength={500}
-            className="resize-none w-full h-[138px] bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-cyan-600"
+            className="resize-none w-full h-[138px] bg-zinc-800/50 rounded-lg placeholder:text-zinc-400 text-zinc-100 p-4 focus:outline-none focus:ring-2 ring-zinc-600 border border-zinc-700"
             {...register('message')}
           />
 
           <Button
-            className="w-max mx-auto mt-6 shadow-button"
+            className="w-max mx-auto mt-6"
             disabled={isSubmitting}
           >
-            Send <HiArrowNarrowRight size={18} />
+            Send message <HiArrowNarrowRight size={18} />
           </Button>
         </form>
       </div>

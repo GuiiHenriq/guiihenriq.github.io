@@ -11,10 +11,16 @@ export const RichText = ({ ...props }: RichTextProps) => {
         bold: ({ children }) => (
           <b className="text-gray-50 font-medium">{children}</b>
         ),
+        p: ({ children }) => (
+          <p className="text-zinc-300 leading-relaxed">{children}</p>
+        ),
         ul: ({ children }) => (
-          <ul className="list-disc list-inside pl-2 flex flex-col gap-1">
+          <ul className="list-disc marker:text-cyan-500 ml-5 space-y-2 leading-relaxed">
             {children}
           </ul>
+        ),
+        li: ({ children }) => (
+          <li className="text-zinc-300">{children}</li>
         ),
         a: ({ children, ...props }) => (
           <a

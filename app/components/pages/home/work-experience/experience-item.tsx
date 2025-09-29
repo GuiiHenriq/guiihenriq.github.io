@@ -42,42 +42,53 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
         }`
       : `${months} month${months > 1 ? 's' : ''}`
 
+  const isCurrent = !endDate
+
   return (
-    <div className="grid grid-cols-[40px,1fr] gap-4 md:gap-10">
-      <div className="flex flex-col items-center gap-4">
-        <div className="rounded-full border border-gray-500 p-0.5">
-          <Image
-            width={40}
-            height={40}
-            className="rounded-full"
-            src={companyLogo.url}
-            alt={`${companyName} Company Logo`}
-          />
-        </div>
+    <div className="relative pl-6 md:pl-6 pl-0 group">
+      {/* Colored segment on hover to highlight the item on the timeline */}
+      <span className="pointer-events-none absolute left-[-16px] top-0 bottom-0 w-px bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity md:block hidden"></span>
 
-        <div className="h-full w-[1px] bg-gray-800"></div>
-      </div>
+      {/* Marker aligned exactly on the container timeline (container line at left-4 => 16px) */}
+      <span className="absolute -left-[22px] top-2 inline-flex items-center justify-center md:block hidden">
+        {isCurrent && (
+          <span className="absolute w-5 h-5 rounded-full bg-cyan-500/20 animate-ping"></span>
+        )}
+        <span className="relative w-3 h-3 bg-cyan-500 rounded-full ring-4 ring-cyan-500/10"></span>
+      </span>
 
-      <div>
-        <div className="flex flex-col gap-2 text-sm sm:text-base">
-          <a
-            href={companyUrl}
-            target="_blank"
-            className="text-gray-500 hover:text-cyan-500 transition-colors"
-          >
-            @ {companyName}
-          </a>
-          <h4 className="text-gray-300">{role}</h4>
-          <span className="text-gray-500">
-            {formattedStartDate} • {formattedEndDate} • ({formattedDuration})
-          </span>
-          <div className="text-gray-400">
-            <RichText content={description.raw} />
+      <div className="p-4 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors">
+        <div className="flex items-start gap-3 mb-3">
+          <div className="rounded-full border border-zinc-700 p-0.5">
+            <Image
+              width={36}
+              height={36}
+              className="rounded-full"
+              src={companyLogo.url}
+              alt={`${companyName} Company Logo`}
+            />
+          </div>
+
+          <div>
+            <h3 className="text-base font-medium text-zinc-100 group-hover:text-zinc-300 transition-colors">{role}</h3>
+            <a
+              href={companyUrl}
+              target="_blank"
+              className="text-zinc-400 hover:text-zinc-300 transition-colors text-sm"
+            >
+              {companyName}
+            </a>
+            <p className="text-zinc-500 text-xs mt-1">
+              {formattedStartDate} - {formattedEndDate} • {formattedDuration}
+            </p>
           </div>
         </div>
 
-        <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">Skills</p>
-        <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8">
+        <div className="text-zinc-400 mb-3 text-sm">
+          <RichText content={description.raw} />
+        </div>
+
+        <div className="flex flex-wrap gap-1">
           {techs.map((tech) => (
             <TechBadge
               key={`experience-${companyName}-tech-${tech.name}`}

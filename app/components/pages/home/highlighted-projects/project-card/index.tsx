@@ -10,31 +10,25 @@ type ProjectCardProps = {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="flex gap-6 lg:gap-12 flex-col lg:flex-row">
-      <div className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full">
+    <div className="group">
+      <div className="h-[200px] sm:h-[300px] w-full mb-4">
         <Image
-          width={420}
-          height={304}
-          className="w-full h-full object-cover rounded-lg"
+          width={800}
+          height={400}
+          className="w-full h-full object-cover rounded-lg border border-zinc-800 group-hover:border-zinc-700 transition-colors"
           src={project.thumbnail.url}
           alt={`Thumbnail of project ${project.title}`}
         />
       </div>
 
-      <div className="flex-1 lg:py-[18px]">
-        <h3 className="flex items-center gap-3 font-medium text-lg text-gray-50">
-          <Image
-            width={20}
-            height={20}
-            src="/images/icons/project-title-icon.svg"
-            alt="Icon of project"
-          />
+      <div>
+        <h3 className="text-xl font-medium text-zinc-100 mb-2 group-hover:text-zinc-300 transition-colors">
           {project.title}
         </h3>
 
-        <p className="text-gray-400 my-6">{project.shortDescription}</p>
+        <p className="text-zinc-400 mb-4">{project.shortDescription}</p>
 
-        <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[350px]">
+        <div className="flex gap-x-2 gap-y-3 flex-wrap mb-4">
           {project.techs.map((tech) => (
             <TechBadge
               key={`${project.title}-tech-${tech.name}`}
@@ -44,7 +38,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
 
         <Link href={`/projects/${project.slug}`}>
-          View more <HiArrowNarrowRight />
+          View project <HiArrowNarrowRight className="inline-block ml-1" />
         </Link>
       </div>
     </div>

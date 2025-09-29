@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['var(--font-inter)', 'sans-serif'],
+      display: ['var(--font-calistoga)', 'serif'],
     },
     extend: {
       backgroundImage: {

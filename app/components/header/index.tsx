@@ -6,31 +6,31 @@ import { NavItem } from './nav-item'
 
 const NAV_ITEMS = [
   {
-    label: 'Home',
+    label: 'home',
     href: '/',
   },
   {
-    label: 'Projects',
+    label: 'projects',
     href: '/projects',
   },
   {
-    label: 'Blog',
+    label: 'blog',
     href: '/blog',
   },
 ]
 
 export const Header = () => {
   return (
-    <header className="absolute top-0 w-full z-10 h-24 flex items-center justify-center">
-      <div className="container flex items-center justify-between">
+    <header className="sticky top-0 w-full z-10 bg-zinc-900/80 backdrop-blur-sm border-b border-zinc-800">
+      <div className="container h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-bold text-4xl text-cyan-400 drop-shadow-lg hover:text-cyan-500 transition-colors"
+          className="font-bold text-xl text-zinc-100 hover:text-zinc-300 transition-colors"
         >
           GH
         </Link>
 
-        <nav className="flex items-center gap-4 sm:gap-10">
+        <nav className="flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <NavItem {...item} key={item.label} />
           ))}

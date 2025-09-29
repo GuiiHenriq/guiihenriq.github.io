@@ -8,7 +8,7 @@ export const Button = ({ children, className, ...props }: ButtonProps) => {
     <button
       {...props}
       className={cn(
-        'bg-cyan-600 py-3 px-4 rounded-lg text-gray-50 flex items-center justify-center gap-2 hover:bg-cyan-500 transition-all disabled:opacity-50',
+        'bg-zinc-50 py-2 px-4 rounded-full text-zinc-900 flex items-center justify-center gap-2 hover:bg-zinc-200 transition-all disabled:opacity-50 text-sm font-medium',
         className
       )}
     >

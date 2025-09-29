@@ -19,49 +19,46 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
   }
 
   return (
-    <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
-      <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
-        <div className="w-full lg:max-w-[530px]">
-          <p className="font-mono text-cyan-400">Hi, my name is</p>
-          <h2 className="text-4xl font-medium mt-2">Guilherme Henrique</h2>
-
-          <div className="text-gray-400 my-6 text-sm sm:text-base">
+    <section className="w-full py-20">
+      <div className="container">
+        <div className="flex flex-col items-center text-center mb-12">
+          <Image
+            width={128}
+            height={128}
+            src={homeInfo.profilePicture.url}
+            alt="Foto Guilherme Henrique"
+            className="w-32 h-32 rounded-full object-cover mb-6"
+          />
+          <h1 className="text-4xl font-bold mb-4">Guilherme Henrique</h1>
+          <div className="text-zinc-400 max-w-2xl mb-8">
             <RichText content={homeInfo.introduction.raw} />
           </div>
-
-          <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
-            {homeInfo.introTechs.map((tech) => (
-              <TechBadge key={tech.name} name={tech.name} />
+          
+          <div className="flex items-center gap-4">
+            {homeInfo.socials.map((contact, index) => (
+              <a
+                href={contact.url}
+                key={`contact-${index}`}
+                target="_blank"
+                className="text-zinc-400 hover:text-zinc-100 transition-colors"
+              >
+                <CMSIcon icon={contact.icon} />
+              </a>
             ))}
-          </div>
-
-          <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
-            <Button className="w-max shadow-button" onClick={handleContact}>
-              Talk To Me <HiArrowNarrowRight size={18} />
-            </Button>
-
-            <div className="flex items-center h-20 gap-3 text-2xl text-gray-600">
-              {homeInfo.socials.map((contact, index) => (
-                <a
-                  href={contact.url}
-                  key={`contact-${index}`}
-                  target="_blank"
-                  className="hover:text-gray-100 transition-colors"
-                >
-                  <CMSIcon icon={contact.icon} />
-                </a>
-              ))}
-            </div>
           </div>
         </div>
 
-        <Image
-          width={420}
-          height={420}
-          src={homeInfo.profilePicture.url}
-          alt="Foto Guilherme Henrique"
-          className="w-[300px] h-[300px] lg:w-[420px] lg:h-[420px] mb-6 lg:mb-0 shadow-2xl rounded-full object-cover"
-        />
+        <div className="flex flex-wrap justify-center gap-3">
+          {homeInfo.introTechs.map((tech) => (
+            <TechBadge key={tech.name} name={tech.name} />
+          ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Button className="inline-flex items-center" onClick={handleContact}>
+            Contact Me <HiArrowNarrowRight className="ml-2" size={18} />
+          </Button>
+        </div>
       </div>
     </section>
   )

@@ -136,8 +136,8 @@ export default async function Home() {
 
       <HeroSection homeInfo={pageData} />
       <SkillsTechs skills={pageData.skillsTechs} />
-      <HighlightedProjects projects={pageData.highlightProjects} />
       <WorkExperience experiences={workExperiences} />
+      <HighlightedProjects projects={pageData.highlightProjects.slice(0, 2)} />
     </>
   )
 }
