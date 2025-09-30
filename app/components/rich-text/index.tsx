@@ -19,9 +19,7 @@ export const RichText = ({ ...props }: RichTextProps) => {
             {children}
           </ul>
         ),
-        li: ({ children }) => (
-          <li className="text-zinc-300">{children}</li>
-        ),
+        li: ({ children }) => <li className="text-zinc-300">{children}</li>,
         a: ({ children, ...props }) => (
           <a
             {...props}

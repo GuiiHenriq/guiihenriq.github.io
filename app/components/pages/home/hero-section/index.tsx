@@ -33,7 +33,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
           <div className="text-zinc-400 max-w-2xl mb-8">
             <RichText content={homeInfo.introduction.raw} />
           </div>
-          
+
           <div className="flex items-center gap-4">
             {homeInfo.socials.map((contact, index) => (
               <a

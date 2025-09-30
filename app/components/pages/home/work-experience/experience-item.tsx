@@ -70,7 +70,9 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
           </div>
 
           <div>
-            <h3 className="text-base font-medium text-zinc-100 group-hover:text-zinc-300 transition-colors">{role}</h3>
+            <h3 className="text-base font-medium text-zinc-100 group-hover:text-zinc-300 transition-colors">
+              {role}
+            </h3>
             <a
               href={companyUrl}
               target="_blank"

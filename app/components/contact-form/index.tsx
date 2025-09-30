@@ -38,13 +38,12 @@ export const ContactForm = () => {
   }
 
   return (
-    <section
-      id="contact"
-      className="py-16 container"
-    >
+    <section id="contact" className="py-16 container">
       <div className="w-full max-w-[420px] mx-auto">
         <h2 className="text-2xl font-display text-center mb-2">get in touch</h2>
-        <p className="text-zinc-400 text-center mb-8">Let's work together!</p>
+        <p className="text-zinc-400 text-center mb-8">
+          Let&apos;s work together!
+        </p>
 
         <form
           className="w-full flex flex-col gap-4"
@@ -71,10 +70,7 @@ export const ContactForm = () => {
             {...register('message')}
           />
 
-          <Button
-            className="w-max mx-auto mt-6"
-            disabled={isSubmitting}
-          >
+          <Button className="w-max mx-auto mt-6" disabled={isSubmitting}>
             Send message <HiArrowNarrowRight size={18} />
           </Button>
         </form>

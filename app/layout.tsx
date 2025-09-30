@@ -1,11 +1,10 @@
-import { Inter, DM_Sans } from 'next/font/google'
+import { Inter, DM_Sans, Calistoga } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
 import { Header } from './components/header'
 import { ContactForm } from './components/contact-form'
 import { Footer } from './components/footer'
 import { Toaster } from './components/toaster'
-import { Calistoga } from 'next/font/google'
 
 export const metadata = {
   title: {
@@ -33,7 +32,10 @@ const calistoga = Calistoga({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${dmSans.variable} ${calistoga.variable}`}>
+    <html
+      lang="pt-BR"
+      className={`${inter.variable} ${dmSans.variable} ${calistoga.variable}`}
+    >
       <body>
         <Toaster />
 
