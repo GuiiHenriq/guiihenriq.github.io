@@ -15,7 +15,8 @@ export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
         work together to create amazing solutions for your company!
       </p>
 
-      <div className="relative pl-8 md:pl-8 pl-0 flex flex-col gap-6 before:content-[''] before:absolute before:left-4 before:top-0 before:bottom-0 before:w-px before:bg-zinc-800 md:before:block before:hidden">
+      <div className="relative flex flex-col gap-6 md:pl-8">
+        <div className="absolute left-4 top-0 bottom-0 w-px bg-zinc-800 hidden md:block" />
         {experiences?.map((experience) => (
           <ExperienceItem
             key={experience.companyName}

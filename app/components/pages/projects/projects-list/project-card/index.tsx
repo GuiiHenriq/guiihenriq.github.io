@@ -9,30 +9,37 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
   const technologies = project.techs.map((tech) => tech.name).join(', ')
 
   return (
-    <div className="rounded-lg h-[436px] flex flex-col bg-gray-800 overflow-hidden border-2 border-gray-800 hover:border-cyan-500 opacity-70 hover:opacity-100 transition-all group">
-      <div className="w-full h-48 overflow-hidden ">
-        <Image
-          width={380}
-          height={200}
-          className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all"
-          src={project.thumbnail.url}
-          alt={`Thumbnail of project ${project.title}`}
-          unoptimized
-        />
-      </div>
+    <div className="group h-full p-6 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors">
+      <div className="flex flex-col gap-4">
+        <div className="w-full aspect-[16/9] overflow-hidden">
+          <Image
+            width={400}
+            height={225}
+            className="w-full h-full object-cover rounded-lg border border-zinc-800 group-hover:border-zinc-700 transition-colors"
+            src={project.thumbnail.url}
+            alt={`Thumbnail of project ${project.title}`}
+            unoptimized
+          />
+        </div>
 
-      <div className="flex-1 flex flex-col p-8">
-        <strong className="font-medium text-gray-50/90 group-hover:text-cyan-500 transition-all">
-          {project.title}
-        </strong>
+        <div className="flex-1">
+          <h3 className="text-xl font-medium text-zinc-100 group-hover:text-zinc-300 transition-colors mb-2">
+            {project.title}
+          </h3>
 
-        <p className="mt-2 text-gray-400 line-clamp-4">
-          {project.shortDescription}
-        </p>
+          <p className="text-zinc-400 mb-6">{project.shortDescription}</p>
 
-        <span className="text-gray-300 text-sm font-medium block mt-auto truncate">
-          {technologies}
-        </span>
+          <div className="flex flex-wrap gap-2">
+            {project.techs.map((tech) => (
+              <span
+                key={tech.name}
+                className="text-zinc-300 bg-zinc-800/50 text-sm py-1 px-3 rounded-full border border-zinc-700"
+              >
+                {tech.name}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )

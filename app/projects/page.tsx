@@ -1,10 +1,11 @@
 import { PageIntroduction } from '../components/pages/projects/page-introduction'
 import { ProjectsList } from '../components/pages/projects/projects-list'
+import { GithubContributions } from '../components/pages/projects/github-contributions'
 import { ProjectsPageData } from '../types/page-info'
 import { fetchHygraphQuery } from '../utils/fetch-hygraph-query'
 
 export const metadata = {
-  title: 'Projects',
+  title: 'Projects | Guilherme Henrique',
 }
 
 const getPageData = async (): Promise<ProjectsPageData> => {
@@ -33,6 +34,7 @@ export default async function Projects() {
   return (
     <>
       <PageIntroduction />
+      <GithubContributions />
       <ProjectsList projects={projects} />
     </>
   )

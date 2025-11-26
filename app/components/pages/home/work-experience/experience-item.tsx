@@ -45,24 +45,24 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
   const isCurrent = !endDate
 
   return (
-    <div className="relative pl-6 md:pl-6 pl-0 group">
-      {/* Colored segment on hover to highlight the item on the timeline */}
-      <span className="pointer-events-none absolute left-[-16px] top-0 bottom-0 w-px bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity md:block hidden"></span>
+    <div className="group relative">
+      {/* Timeline marker and hover effect for desktop */}
+      <div className="hidden md:block">
+        <span className="absolute left-[-16px] top-0 bottom-0 w-px bg-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <span className="absolute left-[-22px] top-6 flex items-center justify-center">
+          {isCurrent && (
+            <span className="absolute w-5 h-5 rounded-full bg-zinc-400/20 animate-ping" />
+          )}
+          <span className="relative w-3 h-3 bg-zinc-400 rounded-full ring-4 ring-zinc-800" />
+        </span>
+      </div>
 
-      {/* Marker aligned exactly on the container timeline (container line at left-4 => 16px) */}
-      <span className="absolute -left-[22px] top-2 inline-flex items-center justify-center md:block hidden">
-        {isCurrent && (
-          <span className="absolute w-5 h-5 rounded-full bg-cyan-500/20 animate-ping"></span>
-        )}
-        <span className="relative w-3 h-3 bg-cyan-500 rounded-full ring-4 ring-cyan-500/10"></span>
-      </span>
-
-      <div className="p-4 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors">
-        <div className="flex items-start gap-3 mb-3">
-          <div className="rounded-full border border-zinc-700 p-0.5">
+      <div className="p-6 border border-zinc-800 rounded-lg hover:border-zinc-700 transition-colors">
+        <div className="flex items-start gap-4 mb-4">
+          <div className="rounded-full border border-zinc-700 p-1">
             <Image
-              width={36}
-              height={36}
+              width={40}
+              height={40}
               className="rounded-full"
               src={companyLogo.url}
               alt={`${companyName} Company Logo`}
@@ -70,27 +70,27 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
           </div>
 
           <div>
-            <h3 className="text-base font-medium text-zinc-100 group-hover:text-zinc-300 transition-colors">
+            <h3 className="text-lg font-medium text-zinc-100 group-hover:text-zinc-300 transition-colors">
               {role}
             </h3>
             <a
               href={companyUrl}
               target="_blank"
-              className="text-zinc-400 hover:text-zinc-300 transition-colors text-sm"
+              className="text-zinc-400 hover:text-zinc-300 transition-colors"
             >
               {companyName}
             </a>
-            <p className="text-zinc-500 text-xs mt-1">
+            <p className="text-zinc-500 text-sm mt-1">
               {formattedStartDate} - {formattedEndDate} • {formattedDuration}
             </p>
           </div>
         </div>
 
-        <div className="text-zinc-400 mb-3 text-sm">
+        <div className="text-zinc-400 mb-4 text-sm">
           <RichText content={description.raw} />
         </div>
 
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-2">
           {techs.map((tech) => (
             <TechBadge
               key={`experience-${companyName}-tech-${tech.name}`}

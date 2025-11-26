@@ -4,21 +4,22 @@ import { HiArrowNarrowLeft } from 'react-icons/hi'
 
 export const PageIntroduction = () => {
   return (
-    <section className="w-full h-[450px] lg:h-[630px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center px-2">
-      <SectionTitle
-        subtitle="projects"
-        title="My Projects"
-        className="flex items-center [&>h3]:text-4xl"
-      />
-
-      <div className="flex flex-col items-center">
-        <p className="text-gray-400 text-center max-w-[640px] my-6 text-sm sm:text-base">
-          Here you can see some of the projects I&apos;ve developed. Feel free
-          to browse and explore the projects to see how they were created, the
-          technologies used, and the implemented features.
+    <section className="container py-8 md:py-16">
+      <div className="max-w-[640px]">
+        <SectionTitle
+          subtitle="portfolio"
+          title="My Projects"
+          className="items-start"
+        />
+        <p className="text-zinc-400 mt-6 mb-6">
+          Here you can see some of the projects I&apos;ve developed. Each
+          project reflects my commitment to creating elegant solutions and
+          learning new technologies.
         </p>
-
-        <Link href="/">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-zinc-300 hover:text-zinc-100 transition-colors"
+        >
           <HiArrowNarrowLeft size={20} />
           Back to home
         </Link>
